@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+<!-- fieldset: 관련 폼 요소들을 그룹화 -->
+<fieldset>
+    <!-- legend: fieldset의 제목/설명 제공 -->
+    <legend>개인 정보</legend>
+    
+    <label for="name">이름:</label>
+    <input type="text" id="name" name="name" placeholder="이름을 입력하세요" required>
+    <!-- placeholder: 입력 힌트, required: 필수 입력 필드 -->
+    
+    <label for="email">이메일:</label>
+    <input type="email" id="email" name="email" maxlength="50">
+    <!-- maxlength: 최대 입력 가능한 문자 수 -->
+    
+    <label>
+    <input type="checkbox" name="agree" checked> 이용약관에 동의합니다
+    <!-- checked: 기본적으로 체크된 상태 -->
+    </label>
+</fieldset>
+
+<!-- 비활성화된 fieldset -->
+<fieldset disabled>
+    <!-- disabled: 내부의 모든 폼 요소 비활성화 -->
+    <legend>추가 정보 (현재 사용 불가)</legend>
+    <label for="address">주소:</label>
+    <input type="text" id="address" name="address">
+</fieldset>
+
+
+<!-- textarea: 여러 줄의 텍스트를 입력받는 요소 -->
+<textarea name="description" rows="5" cols="30" placeholder="여기에 설명을 입력하세요" maxlength="200" readonly>기본 텍스트 내용</textarea>
+<!-- 
+rows: 보이는 텍스트 줄 수 (여기서는 5줄)
+cols: 보이는 텍스트 너비 (여기서는 30자)
+placeholder: 입력 힌트 텍스트
+maxlength: 최대 입력 가능한 문자 수
+readonly: 읽기 전용 (수정 불가능하지만 폼 제출 시 값 전송됨)
+-->
+
+<!-- select: 드롭다운 목록을 생성하는 요소 -->
+<select name="city" disabled>
+    <!-- disabled: 선택 불가능 상태로 만듦 -->
+    <option value="" selected disabled>--도시 선택--</option>
+    <!-- selected: 기본 선택 항목 지정 -->
+    
+    <optgroup label="수도권">
+        <!-- optgroup: 관련 옵션들을 그룹화 -->
+        <option value="seoul">서울</option>
+        <option value="incheon">인천</option>
+        <option value="suwon">수원</option>
+    </optgroup>
+    
+    <optgroup label="지방">
+        <option value="busan">부산</option>
+        <option value="daegu">대구</option>
+        <option value="gwangju">광주</option>
+    </optgroup>
+</select>
+
+<!-- 다중 선택 가능한 select -->
+<select name="skills" multiple>
+    <!-- multiple: 여러 항목 선택 가능 -->
+    <option value="html">HTML</option>
+    <option value="css">CSS</option>
+    <option value="js">JavaScript</option>
+</select>
+
+
+<!-- button: 클릭 가능한 버튼 생성 -->
+<button type="submit">제출하기</button>
+<button type="reset" disabled>초기화</button>
+<!-- disabled: 버튼 비활성화 -->
+<button type="button" onclick="alert('버튼이 클릭되었습니다!')">클릭하세요</button>
+
+<select name = 'city'> 
+    <option value="">이름</option>
+
+</select>
+
+    </body>
+</html>
