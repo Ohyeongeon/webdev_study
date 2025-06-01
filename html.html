@@ -1,116 +1,174 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- 
+<!DOCTYPE html> : HTML 문서가 HTML5 표준을 따르고 있음을 브라우저에 알려주는 선언입니다.
+이 선언은 문서의 최상단에 위치해야 하며, 브라우저가 문서를 올바르게 해석하고 렌더링하도록 돕습니다.
+-->
 
+<html lang="ko">
+<!-- 
+<html> : HTML 문서의 시작과 끝을 나타냅니다.
+lang 속성은 문서의 기본 언어를 설정하며, "ko"는 한국어를 의미합니다.
+-->
+
+<head>
+    <!-- 
+    <head> : 문서의 메타데이터(데이터에 대한 데이터)를 포함하는 영역입니다.
+    이 영역에는 제목, 문자 인코딩, 뷰포트 설정, 외부 리소스 연결 등이 포함됩니다.
+    -->
+
+    <meta charset="UTF-8" />
+    <!-- 
+    <meta charset="UTF-8"> : 문서의 문자 인코딩 방식을 설정합니다.
+    UTF-8은 전 세계 대부분의 언어를 지원하며, 한국어가 깨지지 않도록 설정합니다.
+    -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- 
     <meta name="viewport"> : 반응형 웹 디자인을 위해 뷰포트를 설정합니다.
-    <width=device-width> : 디바이스 화면의 너비에 맞게 콘텐츠를 조정합니다.
-    <initial-scale=1.0> : 초기 화면 배율을 1로 설정합니다.
+    - width=device-width : 디바이스 화면의 너비에 맞게 콘텐츠를 조정합니다.
+    - initial-scale=1.0 : 초기 화면 배율을 1로 설정합니다.
     -->
-    <!--<link>태그 외부 css파일, 파비콘 등을 연결하는 태그
-    <link rel="icon" href="favicon.ico" type="image/x-icon">-->
 
-    <title>제목입니다</title>
-    </head>
-    <body>
-        <!-- 제목 태그 예시 -->
-        <h2>1. 제목 태그 (h1 ~ h6)</h2>
-        <h1>h1 제목</h1>
-        <h2>h2 제목</h2>
-        <h3>h3 제목</h3>
-        <h4>h4 제목</h4>
-        <h5>h5 제목</h5>
-        <h6>h6 제목</h6>
+    <title>HTML 기본 구조</title>
+    <!-- 
+    <title> : 웹 페이지의 제목을 정의합니다.
+    이 제목은 브라우저 탭이나 검색 엔진 결과에서 표시됩니다.
+    -->
 
-        <!-- hgroup 예시 -->
-        <h2>2. hgroup 태그</h2>
-        <hgroup>
-            <h3>주제: 텍스트 태그</h3>
-            <h4>소주제: hgroup 사용</h4>
-        </hgroup>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
 
-        <!-- 문단 및 텍스트 서식 -->
-        <h2>3. 문단 및 텍스트 서식</h2>
-        <p>일반 문단 텍스트입니다.</p>
-        <p><strong>강한 강조 (strong)</strong></p>
-        <p><b>굵은 텍스트 (b)</b></p>
-        <p><i>이탤릭체 (i)</i></p>
-        <p><em>강조 (em)</em></p>
-        <p><ins>밑줄 (ins)</ins></p>
-        <p><del>취소선 (del)</del></p>
-        <p><s>취소선 (s)</s></p>
-        <p><u>밑줄 (u)</u></p>
-        <p>E=MC<sup>2</sup> (위첨자)</p>
-        <p>H<sub>2</sub>O (아래첨자)</p>
-        <p><small>작은 텍스트 (small)</small></p>
+<body>
+    <!-- 
+    <body> : 웹 페이지에서 사용자가 실제로 볼 수 있는 콘텐츠를 포함하는 영역입니다.
+    모든 텍스트, 이미지, 링크, 버튼 등은 이 안에 작성됩니다.
+    -->
 
-        <!-- 줄바꿈과 구분선 -->
-        <h2>4. 줄바꿈과 구분선</h2>
-        <p>첫 번째 줄<br>두 번째 줄</p>
-        <hr>
+    <!-- 1. 제목 태그 -->
+    <h1>HTML 강의 시작!</h1>
+    <!-- 
+    <h1> ~ <h6> : 제목(Heading)을 나타내는 태그입니다.
+    - <h1>은 가장 큰 제목, <h6>은 가장 작은 제목을 의미합니다.
+    - 제목 태그는 문서 구조를 정의하고 검색 엔진 최적화(SEO)에 도움을 줍니다.
+    -->
 
-        <!-- 인용문 -->
-        <h2>5. 인용문</h2>
-        <blockquote>긴 인용문은 blockquote 태그를 사용합니다.</blockquote>
-        <p><q>짧은 인용문은 q 태그를 사용합니다.</q></p>
-        
-        <!-- 그룹화 요소 -->
-        <h2>6. 그룹화 요소</h2>
-        <div>
-            <p>div는 블록 레벨 요소를 그룹화합니다.</p>
-        </div>
-        <p><span>span은 인라인 요소를 그룹화합니다.</span></p>
+    <h2>HTML 기본 태그 배우기</h2>
+    <!-- 
+    <h2> : 두 번째 수준의 제목입니다. 일반적으로 섹션 제목으로 사용됩니다.
+    -->
 
-        <!-- 목록 -->
-        <h2>7. 목록</h2>
-        <h3>순서 없는 목록 (ul)</h3>
-        <ul>
-            <li>항목 1</li>
-            <li>항목 2</li>
-        </ul>
-        <h3>순서 있는 목록 (ol)</h3>
-        <ol>
-            <li>첫 번째 항목</li>
-            <li>두 번째 항목</li>
-        </ol>
+    <!-- 2. 단락 태그 -->
+    <p>HTML은 웹 페이지를 구성하는 기본 마크업 언어입니다.</p>
+    <!-- 
+    <p> : 단락(Paragraph)을 정의하는 태그입니다.
+    텍스트를 그룹화하여 읽기 쉽게 만듭니다.
+    -->
 
-        <!-- 이미지 -->
-        <h2>8. 이미지</h2>
-        <img src="example.jpg" alt="예시 이미지" width="200">
+    <p>이제 다양한 HTML 태그와 속성을 배워 봅시다!</p>
 
-        <!-- 정의 목록 -->
-        <h2>9. 정의 목록</h2>
-        <dl>
-            <dt>용어</dt>
-            <dd>용어에 대한 설명</dd>
-        </dl>
+    <!-- 3. 목록 태그 -->
+    <h3>목록 만들기</h3>
 
-        <!-- 링크 -->
-        <h2>10. 링크</h2>
-        <a href = 'https://www.gbis.go.kr/'>링크</a>
+    <!-- 순서가 없는 목록 -->
+    <ul>
+    <!-- 
+    <ul> : 순서가 없는 목록(Unordered List)을 정의합니다.
+    목록 항목은 보통 점(Bullet)으로 표시됩니다.
+    -->
+    <li>HTML 구조 이해하기</li>
+<!-- 
+    <li> : 목록 항목(List Item)을 정의합니다.
+-->
+    <li>CSS 배우기</li>
+    <li>JavaScript 시작하기</li>
+    </ul>
 
-        <!-- 폼 요소 -->
-        <h2>11. 폼 요소</h2>
-        <form action="#" method="post">
-            <fieldset>
-                <legend>개인 정보</legend>
-                <label for="name">이름:</label>
-                <input type="text" id="name" name="name"><br><br>
-                
-                <label for="description">설명:</label><br>
-                <textarea id="description" name="description" rows="5" cols="30" placeholder="여기에 설명을 입력하세요" maxlength="200"></textarea><br><br>
-                
-                <label for="gender">성별:</label>
-                <select id="gender" name="gender">
-                    <option value="male">남성</option>
-                    <option value="female">여성</option>
-                    <option value="other">동물(기타)</option>
-                </select><br><br>
-                
-                <button type="submit">제출하기</button>
-            </fieldset>
-        </form>
-    </body>
+    <!-- 순서가 있는 목록 -->
+    <ol>
+<!-- 
+    <ol> : 순서가 있는 목록(Ordered List)을 정의합니다.
+    목록 항목은 숫자나 알파벳으로 표시됩니다.
+-->
+    <li>HTML 작성</li>
+    <li>CSS 스타일 적용</li>
+    <li>JavaScript로 동작 추가</li>
+    </ol>
+
+    <!-- 4. 이미지 삽입 -->
+    <h3>이미지 추가하기</h3>
+    <img src="example.jpg" alt="예제 이미지" width="300" />
+<!-- 
+    <img> : 이미지를 삽입하는 태그입니다.
+    - src 속성: 이미지 파일 경로를 지정합니다.
+    - alt 속성: 이미지가 로드되지 않을 때 표시될 대체 텍스트를 정의합니다. (접근성을 위해 필수)
+    - width/height 속성: 이미지 크기를 조정합니다(픽셀 단위).
+-->
+
+    <!-- 5. 링크 삽입 -->
+    <h3>링크 추가하기</h3>
+    <a href="https://www.example.com" target="_blank">예제 사이트로 이동</a>
+<!-- 
+    <a>: 하이퍼링크를 생성하는 태그입니다.
+    - href 속성: 이동할 URL을 지정합니다.
+    - target="_blank": 링크를 새 탭에서 열도록 설정합니다.
+-->
+
+    <!-- 6. 테이블 만들기 -->
+    <h3>간단한 테이블</h3>
+    <table border="1">
+<!-- 
+    <table>: 표(Table)를 생성하는 태그입니다.
+    border 속성: 테두리를 설정합니다(HTML5에서는 CSS로 스타일링 권장).
+    -->
+    <tr>
+<!-- 
+        <tr>: 표의 행(Row)을 정의하는 태그입니다.
+-->
+        <th>이름</th>
+        <!-- 
+        <th>: 표의 헤더 셀(Header Cell)을 정의하는 태그입니다. 보통 굵게 표시됩니다.
+        -->
+        <th>나이</th>
+    </tr>
+    <tr>
+        <!-- 데이터 행 추가 -->
+        <td>홍길동</td>
+<!-- 
+    <td>: 표의 데이터 셀(Data Cell)을 정의하는 태그입니다.
+-->
+        <td>25</td>
+    </tr>
+    <tr>
+        <td>김철수</td>
+        <td>30</td>
+    </tr>
+    </table>
+
+    <!-- 7. 폼 만들기 -->
+    <h3>간단한 입력 폼</h3>
+    <form action="/submit" method="post">
+<!-- 
+    <form>: 사용자 입력 데이터를 서버로 전송하기 위한 폼을 생성합니다.
+    - action 속성: 데이터를 보낼 URL을 지정합니다.
+    - method 속성: 데이터를 전송하는 방법(GET 또는 POST)을 지정합니다.
+-->
+    이름: 
+    <input type="text" name="username" />
+<!-- 
+    <input>: 사용자 입력 필드를 생성하는 태그입니다.
+    - type="text": 텍스트 입력 필드 생성
+    - name: 서버로 전송될 데이터 이름
+-->
+    나이: 
+    <input type="number" name="age" />
+    <!-- type="number": 숫자 입력 필드 생성 -->
+
+    <button type="submit">제출</button>
+<!-- 
+    버튼을 클릭하면 폼 데이터를 서버로 전송합니다.
+-->
+    </form>
+
+</body>
+
 </html>
