@@ -1,0 +1,254 @@
+/* CSS(Cascading Style Sheets)
+html이 뼈대면 css는 피부이다. css는 웹페이지를 이쁘게 꾸며주는 역할을 한다
+
+css는 CSS로 할 수 있는 일들:
+
+1. 색상 바꾸기
+
+2. 글자 크기와 모양 바꾸기
+
+3. 여백과 간격 조절하기
+
+4. 배경 이미지나 색상 설정하기
+
+5. 요소를 화면에 배치하기
+
+6. 마우스를 올렸을 때의 변화 설정하기
+
+7. 애니메이션 만들기
+
+html문서에 css를 적용하는 3가지 방법법
+
+1. 인라인 스타일 (Inline Style):
+html태그 안에 직접 스타일 속성을 넣는 방법.
+장점: 빠르게 적용가능하다.
+
+단점: 여러 요소에 같은 스타일을 적용하기 힘들다.
+
+ex) <p style="color: blue; font-size: 16px;">이 글자는 파란색이고 16px 크기입니다</p>
+
+2. 내부 스타일 시트 (Internal Style Sheet):
+html문서에 head부분에 style태그를 사용해 css태그를 사용하는 방법이다. 
+장점: 한 html파일 안에서 여러 스타일 적용 가능
+
+단점: 다른 html파일에서는 사용할 수 없음
+
+ex) <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+
+
+        .highlight {
+            color: blue; 
+            font-weight: bold;
+        }
+
+        .good {
+            color: rgb(255, 0, 0); 
+            font-weight: bold;
+        }
+        
+    </style>
+
+3. 외부 스타일 시트 (External Style Sheet):
+별도의 css파일을 만들어서 html문서에서 링크로 연결하는 방식이다. 주로 이 방법을 쓴다.
+장점: 여러 html파일에서 같은 스타일을 사용 가능, 슽일과 내용을 분리해서 관리 가능, 파일 하나만 수정하면 모든 파일에 적용 가능하고 실무에서는 대부분 이 방법을 사용한다.
+
+
+선택자(Selectors): 어떤 요소에 스타일을 적용할지 정하는 것이다.
+
+1. 태그 선택자: html태그 이름을 그대로 사용하는 방식이다.
+
+ex) p {
+  color: blue;
+}
+
+2. 클래스 선택자: .class 선언하고 해당 클래스에 같은 요소를 적용한다.
+
+ex) 'html'
+<p class="highlight">이걸 바꾸고 싶다</p>
+
+'CSS'
+.highlight {
+  font-weight: bold;
+}
+
+3. id 선택자: #id 형식으로 사용한다. 한 페이지에서 같은 id는 하나만 사용 가능하다.
+
+ex) 'html'
+<h1 id="main-title">웹사이트 제목</h1>
+
+'CSS'
+#main-title {
+  text-align: center;
+}
+
+4. 속성 선택자: 특정 속성을 가진 요소를 선택한다.
+
+ex) input[type="text"] {
+  background-color: lightblue;
+}
+
+스타일 상속과 캐스케이딩(Cascading) 개념
+
+스타일 상속 (Inheritance): 부모 요소에 적용한 일부 스타일이 자식 요소에게도 전달되는 것을 말한다
+
+ex) <div class="parent">
+  부모 텍스트
+  <p>자식 텍스트</p>
+</div>
+.parent {
+  color: blue;
+  font-family: Arial;
+  border: 1px solid black; 
+}
+주로 상속되는 속성
+1. 글자 관련(color, font-family, font-size 등)
+2. 텍스트 관련(text-align, text-indent 등)
+
+주로 상속되지 않는 속성
+1. 레이아웃 관련: width, height, margin, padding, border 등
+
+2. 위치 관련: position, top, left, z-index 등
+
+캐스케이딩: 여러 스타일 규칙이 동일한 html 요소에 적용될때 어떤 스타일이 최종적으로 적용될지 결정하는 것.
+
+캐스케이딩의 필요성: html 요소는 하나 이상의 스타일의 영향을 받을 수 있기 때문에 어떤 스타일을 우선적으로 적용할지 결정하는 규칙이 필요하며 이 규칙을 캐스케이딩이라고 함.
+
+캐스케이딩 규칙:
+
+1. 스타일 우선 순위: 스타일 규칙의 적용범위에 따라 스타일의 우선순위가 결정되고 그 우선순윙 따라 스타일이 적용되는 방식.
+
+2. 스타일 상속: 태그들의 포함 관계에 따라 부모요소의 태그들이 자식 요소로 상속되는 것.
+
+
+스타일 우선순위 결정 요소:
+
+1. 중요도: 스타일이 선언된 위치에 따라 우선순위를 매기는것(!important 키워드를 사용하면 중요도를 최우선으로 끌어올릴 수 있습니다.)
+
+2. 명시도: 선택자가 얼마나 구체적인지를 나타내는 지표입니다. 선택자가 더 구체적일수록 우선순위가 더 높아집니다.
+
+3. 코드 순서: css규칙이 문서에 나타내는 순서를 의미합니다. 중요도와 명시도가 동일한 경우 문서에서 나주에 나오는 규칙이 이전 규칙을 덮어 씁니다.
+
+캐스케이딩 예시:
+ex) <div style='background-color: violet;'>
+  부모 요소
+  <div>자식 요소</div>
+</div>
+
+ex) <h2>태그 선택자</h2>
+<h2 class='cls'>클래스 선택자</h2>
+<h2 id='i' class='cls'>아이디 선택자</h2>
+<h2 class='cls' style='background-color: green'>인라인 선택자</h2>
+
+===========================================================
+
+h2 {
+  background-color: red;
+}
+.cls {
+  background-color: blue;
+}
+#i {
+  background-color: violet;
+}
+
+박스 모델: 
+1. margin: 박스와 다른 박스 사이의 바깥 공간
+2. border: 박스를 감싸는 테두리
+3. padding: 내용이랑 테두리 사이의 안쪽 공간
+4. content: 글씨나 이미지가 들어가는 진짜 내용들
+*/
+
+.box {
+  width: 200px; /*내용 크기*/
+  padding: 20px; /*내용과 테두리 사이의 공간*/
+  /*border: 3px blue;  박스를 감싸는 테두리*/
+  margin: 20px; /*margin 바깥쪽 공간*/
+  content
+} 
+
+/* css기본 규칙은 width와 height에 content만 들어간다. 실무에서는 대개 box-sizing: border-box;만 사용한다. 그러면 border와 padding까지 다 크기를 딱 맟출 수 있다. 
+
+css레이아웃 기초:
+1. 레이아웃이란? 페이지속 박스를 어디에 어떻게 배치할지 정하는 방식입니다.
+2. display 속성: 
+  2-1: block: 한줄을 통채로 차지하고 항상 아래로 내려간다.
+  ex) div, p, h1...
+  특징: width, height, margin, padding 다 잘 먹힌다.
+
+  2-2: inline: 옆으로 붙어서 이어진다.
+  ex) span, a, b...
+  특징: width, height는 거의 못쓰고 margin, padding에는 부분 적용
+
+  <div>block입니다</div>
+  <span>inline입니다!</span>
+  <span>123</span>
+
+3. inline-block: inline처럼 나란히 출력되고 block처럼 크기 조절이 된다.
+4. float:
+  4-1: float:left/right 박스를 물위에 띄워서 오른쪽이나 왼쪽으로 딱 붙인다.
+  4-2: clear:both float 때문에 까진 줄 바꿈을 바로잡는다.
+
+position
+문서흐름: 브라우저가 html요소들을 기본적으로 배치하는 순서와 방식을 말한다.
+position 속성: 기본 배치규칙을 어떻게 변경할지를 결정.
+  1. static(정적 배치)_기본값
+   1-1. 모든 html요소의 기본 position값
+   top, right, bottom, left, z-index 속성이 완전히 무시됨.
+   block 요소는 위에서 아래로, inline 요소는 왼쪽에서 오른쪽으로 배치
+
+   언제 사용하는가: 
+    1. 특별한 배치가 필요없는 일반적인 텍스트나 문단 목록
+    2. 기본 레이아웃을 유지하고 싶을 때 */
+
+
+/*
+.class{
+  position: static; 기본값임으로 생략 가능
+}
+  */
+
+/*
+  2. relative(상대적 배치): 원래 기본값에서 정해준 값만큼 움직이는것.
+    2-1. 요소의 원래 위치(static의 위치)를 기준점으로 삼음.
+    이동 후에도 원래 자리의 공간은 그대로 유지
+    top, right, bottom, left 속성으로 상대적 위치 조절 가능.
+    (아주 중요) absolute 자식 요소의 기준점 역할을 한다.
+*/
+
+/*
+.class{
+  position: relative;
+  top: 20px;
+}
+  */
+
+  /*
+  3. absolute(절대적 배치): 부모 기준으로 정확한 좌표에 배치.
+  문서 흐름에서 완전히 제거(다른 요소들이 이 요소가 없는것 처럼 행동)
+  가장 가까운 position을 기준으로 배치. 만약 가까운 position이 없다면 html기준으로 배치.
+  top, right, bottom, left로 정확한 자리 지정이 가능. 
+  다른 요소들과 겹칠 수 있음(z-index로 순서 조정)
+  
+  4. fixed(고정): 
+  브라우저 창을 기준으로 위치가 결정된다.
+  스크롤해도 항상 같은 위치에 고정됨.
+  문서 흐름에서 제거됨.
+
+  5. sticky(relative와 fixed의 하이브리드): 스크롤 위치에 따라 relative 에서 fixed로 전환된다.
+  임계점(threshold)에 도달하면 고정됨.
+  부모요소를 벗어나면 다시 일반 흐름을 따름.
+
+  6. z-index: 요소들의 쌓임 순서를 제어함.
+  position이 static이 아닌 요소에만 적용됨.
+  값이 클수록 위에 표시됨.
+  같은 값이면 html에서 나중에 나온 요소가 위에 표시된다.
+  */
