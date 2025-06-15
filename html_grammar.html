@@ -5,228 +5,504 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- 
-    <meta name="viewport"> : 반응형 웹 디자인을 위해 뷰포트를 설정합니다.
-    <width=device-width> : 디바이스 화면의 너비에 맞게 콘텐츠를 조정합니다.
-    <initial-scale=1.0> : 초기 화면 배율을 1로 설정합니다.
+    SEO 최적화를 위한 메타 태그들 (현업에서 필수)
     -->
-    <!--<link>태그 외부 css파일, 파비콘 등을 연결하는 태그
-    <link rel="icon" href="favicon.ico" type="image/x-icon">-->
-
-    <title>HTML 태그 종합 예제</title>
+    <meta name="description" content="HTML 태그 종합 예제 - 실무에서 자주 사용되는 HTML 태그들">
+    <meta name="keywords" content="HTML, 태그, 웹개발, 마크업">
+    <meta name="author" content="개발자명">
+    <meta property="og:title" content="HTML 태그 종합 예제">
+    <meta property="og:description" content="실무에서 자주 사용되는 HTML 태그들의 완전한 예제">
+    
+    <!-- 외부 CSS 파일 연결 (실무에서 일반적) -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    
+    <title>HTML 태그 종합 예제 - 실무 중심</title>
 </head>
 <body>
-    <!-- h1~h6 태그: 제목을 나타내는 태그로 숫자가 작을수록 중요도가 높음 -->
-    <h1>1. 제목 태그 (h1 ~ h6)</h1>
-    <h1>가장 중요한 제목(h1)</h1>
-    <h2>두 번째로 중요한 제목(h2)</h2>
-    <h3>세 번째로 중요한 제목(h3)</h3>
-    <h4>네 번째로 중요한 제목(h4)</h4>
-    <h5>다섯 번째로 중요한 제목(h5)</h5>
-    <h6>가장 덜 중요한 제목(h6)</h6>
+    <!-- 
+    시맨틱 태그 사용 (SEO와 웹 접근성에 중요)
+    현업에서는 div 대신 의미있는 태그들을 사용
+    -->
+    <header>
+        <nav>
+            <!-- 네비게이션 메뉴 (실제 웹사이트에서 필수) -->
+            <ul>
+                <li><a href="#text-tags">텍스트 태그</a></li>
+                <li><a href="#forms">폼 요소</a></li>
+                <li><a href="#multimedia">멀티미디어</a></li>
+                <li><a href="#tables">테이블</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <!-- hgroup 예시 -->
-    <h2>2. hgroup 태그</h2>
-    <hgroup>
-        <h3>주제: 텍스트 태그</h3>
-        <h4>소주제: hgroup 사용</h4>
-    </hgroup>
-
-    <!-- 문단 및 텍스트 서식 -->
-    <h2>3. 문단 및 텍스트 서식</h2>
-    <!-- p 태그: 단락(문단)을 나타내는 블록 요소 -->
-    <p>이것은 하나의 문단입니다. p 태그는 텍스트를 문단 단위로 묶습니다.</p>
-    <p>일반 문단 텍스트입니다.</p>
-    
-    <!-- strong, em 태그: 텍스트 강조 (strong은 강한 강조, em은 강조) -->
-    <p><strong>강한 강조 (strong)</strong></p>
-    <p><strong>중요한 내용 강조(strong)</strong>, 그리고 <em>강조된(em)</em> 텍스트입니다.</p>
-    <p><b>굵은 텍스트 (b)</b></p>
-    <p><i>이탤릭체 (i)</i></p>
-    <p><em>강조 (em)</em></p>
-    
-    <!-- ins, del 태그: 추가된(ins), 삭제된(del) 텍스트를 나타냄 -->
-    <p><ins>밑줄 (ins)</ins></p>
-    <p><del>취소선 (del)</del></p>
-    <p>내가 좋아하는 색상은 <del>파란색</del> <ins>빨간색</ins>입니다.</p>
-    <p><s>취소선 (s)</s></p>
-    <p><u>밑줄 (u)</u></p>
-    
-    <!-- sub, sup 태그: 아래첨자(sub), 위첨자(sup)를 나타냄 -->
-    <p>E=MC<sup>2</sup> (위첨자)</p>
-    <p>H<sub>2</sub>O (아래첨자)</p>
-    <p>물의 화학식은 H<sub>2</sub>O이고, 10의 제곱은 10<sup>2</sup>=100입니다.</p>
-    <p>화학식: H<sub>2</sub>O, 수학: x<sup>2</sup></p>
-    <p><small>작은 텍스트 (small)</small></p>
-
-    <!-- 줄바꿈과 구분선 -->
-    <h2>4. 줄바꿈과 구분선</h2>
-    <!-- br 태그: 줄바꿈을 하는 빈(empty) 요소 -->
-    <p>첫 번째 줄<br>두 번째 줄</p>
-    <p>첫 번째 줄입니다.<br>두 번째 줄입니다.</p>
-    <hr>
-
-    <!-- 인용문 -->
-    <h2>5. 인용문</h2>
-    <!-- blockquote 태그: 긴 인용문을 나타냄 -->
-    <blockquote>긴 인용문은 blockquote 태그를 사용합니다.</blockquote>
-    <blockquote cite="https://example.com">
-        이것은 긴 인용문입니다. 보통 들여쓰기가 되어 표시됩니다.
-    </blockquote>
-    
-    <!-- q 태그: 짧은 인라인 인용을 나타내는 태그 -->
-    <p><q>짧은 인용문은 q 태그를 사용합니다.</q></p>
-    <p>그는 <q cite="https://example.com">HTML은 쉽다</q>라고 말했다.</p>
-    
-    <!-- 그룹화 요소 -->
-    <h2>6. 그룹화 요소</h2>
-    <!-- div 태그: 블록 수준 요소를 묶는 컨테이너 역할 -->
-    <div>
-        <p>div는 블록 레벨 요소를 그룹화합니다.</p>
-    </div>
-    <div style="border:1px solid black;">
-        이 내용은 div로 묶인 블록입니다.
-    </div>
-    
-    <!-- span 태그: 인라인 요소를 묶는 컨테이너 역할 -->
-    <p><span>span은 인라인 요소를 그룹화합니다.</span></p>
-    <p><span style="color:red;">이 텍스트만 빨간색으로 표시됩니다.</span></p>
-
-    <!-- 목록 -->
-    <h2>7. 목록</h2>
-    <h3>순서 없는 목록 (ul)</h3>
-    <!-- ul, li 태그: 순서 없는 목록 -->
-    <ul>
-        <li>항목 1</li>
-        <li>항목 2</li>
-        <li>첫 번째 항목</li>
-        <li>두 번째 항목</li>
-        <li>세 번째 항목</li>
-    </ul>
-    
-    <h3>순서 있는 목록 (ol)</h3>
-    <!-- ol 태그: 순서가 있는 목록(번호 매김) -->
-    <ol>
-        <li>첫 번째 항목</li>
-        <li>두 번째 항목</li>
-        <li>첫 번째 단계</li>
-        <li>두 번째 단계</li>
-        <li>세 번째 단계</li>
-    </ol>
-
-    <!-- 이미지 -->
-    <h2>8. 이미지</h2>
-    <!-- img 태그: 이미지를 삽입하는 요소(빈 요소) -->
-    <img src="example.jpg" alt="예시 이미지" width="200">
-
-    <!-- 정의 목록 -->
-    <h2>9. 정의 목록</h2>
-    <!-- dl, dt, dd 태그: 정의 목록(dl), 용어(dt), 설명(dd)을 나타냄 -->
-    <dl>
-        <dt>용어</dt>
-        <dd>용어에 대한 설명</dd>
-        <dt>HTML이란?</dt>
-        <dd>- 웹 페이지를 만드는 마크업 언어입니다.</dd>
-        <dt>CSS란?</dt>
-        <dd>- HTML을 꾸미기 위한 스타일 언어입니다.</dd>
-    </dl>
-
-    <!-- 링크 -->
-    <h2>10. 링크</h2>
-    <!-- a 태그: 하이퍼링크를 생성하는 요소 -->
-    <a href='https://www.gbis.go.kr/'>링크</a><br>
-    <a href="https://www.example.com">예제 웹사이트 방문하기</a>
-
-    <!-- 폼 요소 -->
-    <h2>11. 폼 요소</h2>
-    <form action="#" method="post">
-        <!-- fieldset: 관련 폼 요소들을 그룹화 -->
-        <fieldset>
-            <!-- legend: fieldset의 제목/설명 제공 -->
-            <legend>개인 정보</legend>
+    <main>
+        <!-- 제목 구조 (h1은 페이지당 하나만 사용하는 것이 SEO에 좋음) -->
+        <h1>HTML 태그 종합 예제 - 실무 중심</h1>
+        
+        <section id="text-tags">
+            <h2>1. 텍스트 관련 태그</h2>
             
-            <label for="name">이름:</label>
-            <input type="text" id="name" name="name" placeholder="이름을 입력하세요" required><br><br>
-            <!-- placeholder: 입력 힌트, required: 필수 입력 필드 -->
-            
-            <label for="email">이메일:</label>
-            <input type="email" id="email" name="email" maxlength="50"><br><br>
-            <!-- maxlength: 최대 입력 가능한 문자 수 -->
-            
-            <label for="description">설명:</label><br>
-            <!-- textarea: 여러 줄의 텍스트를 입력받는 요소 -->
-            <textarea id="description" name="description" rows="5" cols="30" placeholder="여기에 설명을 입력하세요" maxlength="200"></textarea><br><br>
+            <!-- hgroup: 제목과 부제목을 그룹화 (HTML5에서 추가) -->
+            <hgroup>
+                <h3>텍스트 서식 태그</h3>
+                <p>실무에서 자주 사용되는 텍스트 마크업</p>
+            </hgroup>
+
             <!-- 
-            rows: 보이는 텍스트 줄 수 (여기서는 5줄)
-            cols: 보이는 텍스트 너비 (여기서는 30자)
-            placeholder: 입력 힌트 텍스트
-            maxlength: 최대 입력 가능한 문자 수
+            strong vs b, em vs i의 차이:
+            - strong, em: 의미적 강조 (스크린리더가 인식)
+            - b, i: 시각적 스타일링만 (CSS로 대체 권장)
             -->
+            <p><strong>중요한 내용</strong> (의미적 강조)</p>
+            <p><em>강조된 텍스트</em> (emphasis)</p>
+            <p><mark>하이라이트된 텍스트</mark> (검색 결과 등에서 사용)</p>
+            <p><abbr title="HyperText Markup Language">HTML</abbr> (약어 설명)</p>
             
-            <label for="gender">성별:</label>
-            <!-- select: 드롭다운 목록을 생성하는 요소 -->
-            <select id="gender" name="gender">
-                <option value="male">남성</option>
-                <option value="female">여성</option>
-                <option value="other">동물(기타)</option>
-            </select><br><br>
+            <!-- 편집 관련 태그 (위키, CMS에서 자주 사용) -->
+            <p>가격이 <del>10,000원</del> <ins>8,000원</ins>으로 변경되었습니다.</p>
             
-            <label>
-                <input type="checkbox" name="agree" checked> 이용약관에 동의합니다
-                <!-- checked: 기본적으로 체크된 상태 -->
-            </label><br><br>
+            <!-- 과학/수학 표기 (교육 사이트에서 필수) -->
+            <p>물의 화학식: H<sub>2</sub>O</p>
+            <p>아인슈타인 공식: E=mc<sup>2</sup></p>
             
-            <!-- button: 클릭 가능한 버튼 생성 -->
-            <button type="submit">제출하기</button>
-            <button type="reset">초기화</button>
-        </fieldset>
-    </form>
+            <!-- 주소 정보 (연락처 페이지에서 사용) -->
+            <address>
+                작성자: <a href="mailto:developer@example.com">개발자</a><br>
+                주소: 서울특별시 강남구 테헤란로 123
+            </address>
+        </section>
 
-    <!-- 추가 폼 요소 예시 -->
-    <h2>12. 추가 폼 요소</h2>
-    
-    <!-- 비활성화된 fieldset -->
-    <fieldset disabled>
-        <!-- disabled: 내부의 모든 폼 요소 비활성화 -->
-        <legend>추가 정보 (현재 사용 불가)</legend>
-        <label for="address">주소:</label>
-        <input type="text" id="address" name="address">
-    </fieldset>
+        <section id="quotes">
+            <h2>2. 인용문 태그</h2>
+            
+            <!-- 긴 인용문 (블로그, 뉴스 사이트에서 자주 사용) -->
+            <blockquote cite="https://www.w3.org/TR/html52/">
+                <p>"HTML은 웹 페이지와 웹 애플리케이션을 만들기 위한 표준 마크업 언어입니다."</p>
+                <footer>— <cite>W3C HTML5.2 스펙</cite></footer>
+            </blockquote>
+            
+            <!-- 짧은 인용문 (인라인) -->
+            <p>팀 버너스 리는 <q cite="https://example.com">웹은 모든 사람을 위한 것</q>이라고 말했습니다.</p>
+        </section>
 
-    <!-- 읽기 전용 textarea -->
-    <textarea name="readonly_description" rows="3" cols="30" readonly>기본 텍스트 내용 (읽기 전용)</textarea>
-    <!-- readonly: 읽기 전용 (수정 불가능하지만 폼 제출 시 값 전송됨) -->
+        <section id="lists">
+            <h2>3. 목록 태그</h2>
+            
+            <!-- 네비게이션에서 자주 사용 -->
+            <h3>기술 스택</h3>
+            <ul>
+                <li>Frontend: HTML, CSS, JavaScript</li>
+                <li>Backend: Node.js, Python</li>
+                <li>Database: MySQL, MongoDB</li>
+            </ul>
+            
+            <!-- 절차, 튜토리얼에서 사용 -->
+            <h3>개발 절차</h3>
+            <ol>
+                <li>요구사항 분석</li>
+                <li>설계 및 기획</li>
+                <li>개발 및 구현</li>
+                <li>테스트 및 배포</li>
+            </ol>
+            
+            <!-- FAQ, 용어집에서 자주 사용 -->
+            <h3>용어 설명</h3>
+            <dl>
+                <dt>API (Application Programming Interface)</dt>
+                <dd>애플리케이션들이 서로 소통할 수 있게 하는 인터페이스</dd>
+                
+                <dt>DOM (Document Object Model)</dt>
+                <dd>HTML이나 XML 문서에 접근하고 조작할 수 있는 프로그래밍 인터페이스</dd>
+            </dl>
+        </section>
 
-    <!-- 그룹화된 select 옵션 -->
-    <select name="city">
-        <option value="" selected disabled>--도시 선택--</option>
-        <!-- selected: 기본 선택 항목 지정 -->
+        <section id="forms">
+            <h2>4. 폼 요소 (실무에서 가장 중요)</h2>
+            
+            <!-- 실제 회원가입, 로그인 폼에서 사용되는 구조 -->
+            <form action="/submit" method="post" novalidate>
+                <!-- novalidate: 브라우저 기본 검증 비활성화 (커스텀 검증 사용시) -->
+                
+                <fieldset>
+                    <legend>회원 정보</legend>
+                    
+                    <!-- 접근성을 위한 label 연결 (스크린리더 지원) -->
+                    <div class="form-group">
+                        <label for="username">사용자명 *</label>
+                        <input 
+                            type="text" 
+                            id="username" 
+                            name="username" 
+                            required 
+                            minlength="3" 
+                            maxlength="20"
+                            pattern="[a-zA-Z0-9_]+"
+                            placeholder="영문, 숫자, 언더스코어만 가능"
+                            autocomplete="username"
+                        >
+                        <!-- 
+                        pattern: 정규식 검증
+                        autocomplete: 브라우저 자동완성 힌트
+                        -->
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">이메일 *</label>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            required
+                            autocomplete="email"
+                        >
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="password">비밀번호 *</label>
+                        <input 
+                            type="password" 
+                            id="password" 
+                            name="password" 
+                            required 
+                            minlength="8"
+                            autocomplete="new-password"
+                        >
+                    </div>
+                    
+                    <!-- 현업에서 자주 사용되는 입력 타입들 -->
+                    <div class="form-group">
+                        <label for="birthdate">생년월일</label>
+                        <input type="date" id="birthdate" name="birthdate" min="1900-01-01" max="2024-12-31">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="age">나이</label>
+                        <input type="number" id="age" name="age" min="1" max="120" step="1">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="website">개인 웹사이트</label>
+                        <input type="url" id="website" name="website" placeholder="https://example.com">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">전화번호</label>
+                        <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}" placeholder="010-1234-5678">
+                    </div>
+                    
+                    <!-- 라디오 버튼 그룹 -->
+                    <fieldset>
+                        <legend>성별</legend>
+                        <input type="radio" id="male" name="gender" value="male">
+                        <label for="male">남성</label>
+                        
+                        <input type="radio" id="female" name="gender" value="female">
+                        <label for="female">여성</label>
+                        
+                        <input type="radio" id="other" name="gender" value="other">
+                        <label for="other">기타</label>
+                    </fieldset>
+                    
+                    <!-- 체크박스 그룹 -->
+                    <fieldset>
+                        <legend>관심 분야</legend>
+                        <input type="checkbox" id="frontend" name="interests" value="frontend">
+                        <label for="frontend">프론트엔드</label>
+                        
+                        <input type="checkbox" id="backend" name="interests" value="backend">
+                        <label for="backend">백엔드</label>
+                        
+                        <input type="checkbox" id="mobile" name="interests" value="mobile">
+                        <label for="mobile">모바일</label>
+                    </fieldset>
+                    
+                    <!-- 드롭다운 (실무에서 많이 사용) -->
+                    <div class="form-group">
+                        <label for="country">국가</label>
+                        <select id="country" name="country" required>
+                            <option value="">-- 국가 선택 --</option>
+                            <optgroup label="아시아">
+                                <option value="kr">한국</option>
+                                <option value="jp">일본</option>
+                                <option value="cn">중국</option>
+                            </optgroup>
+                            <optgroup label="유럽">
+                                <option value="uk">영국</option>
+                                <option value="de">독일</option>
+                                <option value="fr">프랑스</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                    
+                    <!-- 다중 선택 -->
+                    <div class="form-group">
+                        <label for="skills">보유 기술 (복수 선택 가능)</label>
+                        <select id="skills" name="skills" multiple size="5">
+                            <option value="html">HTML</option>
+                            <option value="css">CSS</option>
+                            <option value="js">JavaScript</option>
+                            <option value="react">React</option>
+                            <option value="vue">Vue.js</option>
+                        </select>
+                        <small>Ctrl/Cmd 키를 누르고 클릭하여 여러 항목 선택</small>
+                    </div>
+                    
+                    <!-- 텍스트 영역 (피드백, 문의사항에서 사용) -->
+                    <div class="form-group">
+                        <label for="message">자기소개</label>
+                        <textarea 
+                            id="message" 
+                            name="message" 
+                            rows="5" 
+                            cols="50" 
+                            maxlength="500"
+                            placeholder="500자 이내로 자기소개를 작성해주세요"
+                        ></textarea>
+                    </div>
+                    
+                    <!-- 파일 업로드 (실무에서 필수) -->
+                    <div class="form-group">
+                        <label for="resume">이력서 업로드</label>
+                        <input 
+                            type="file" 
+                            id="resume" 
+                            name="resume" 
+                            accept=".pdf,.doc,.docx"
+                            multiple
+                        >
+                        <small>PDF, DOC, DOCX 파일만 가능 (최대 5MB)</small>
+                    </div>
+                    
+                    <!-- 숨겨진 필드 (보안, 추적에 사용) -->
+                    <input type="hidden" name="csrf_token" value="abc123">
+                    <input type="hidden" name="source" value="website">
+                    
+                    <!-- 동의 체크박스 (필수) -->
+                    <div class="form-group">
+                        <input type="checkbox" id="terms" name="terms" required>
+                        <label for="terms">
+                            <a href="/terms" target="_blank">이용약관</a> 및 
+                            <a href="/privacy" target="_blank">개인정보처리방침</a>에 동의합니다 *
+                        </label>
+                    </div>
+                    
+                    <!-- 버튼 그룹 -->
+                    <div class="button-group">
+                        <button type="submit">회원가입</button>
+                        <button type="reset">초기화</button>
+                        <button type="button" onclick="history.back()">취소</button>
+                    </div>
+                </fieldset>
+            </form>
+        </section>
+
+        <section id="multimedia">
+            <h2>5. 멀티미디어 태그</h2>
+            
+            <!-- 반응형 이미지 (현업에서 필수) -->
+            <figure>
+                <img 
+                    src="example.jpg" 
+                    alt="예시 이미지 - 웹 개발 작업 모습" 
+                    width="400" 
+                    height="300"
+                    loading="lazy"
+                    srcset="example-small.jpg 320w, example-medium.jpg 640w, example-large.jpg 1024w"
+                    sizes="(max-width: 320px) 280px, (max-width: 640px) 600px, 1000px"
+                >
+                <!-- 
+                loading="lazy": 지연 로딩 (성능 최적화)
+                srcset: 다양한 해상도 이미지 제공
+                sizes: 뷰포트별 이미지 크기 지정
+                -->
+                <figcaption>웹 개발자의 작업 환경 예시</figcaption>
+            </figure>
+            
+            <!-- 오디오 (팟캐스트, 음악 사이트에서 사용) -->
+            <figure>
+                <audio controls preload="metadata">
+                    <source src="audio.mp3" type="audio/mpeg">
+                    <source src="audio.ogg" type="audio/ogg">
+                    <p>브라우저가 오디오를 지원하지 않습니다. <a href="audio.mp3">다운로드</a></p>
+                </audio>
+                <figcaption>예시 오디오 파일</figcaption>
+            </figure>
+            
+            <!-- 비디오 (교육, 마케팅 사이트에서 활용) -->
+            <figure>
+                <video controls width="400" height="300" poster="video-thumbnail.jpg" preload="metadata">
+                    <source src="video.mp4" type="video/mp4">
+                    <source src="video.webm" type="video/webm">
+                    <track kind="subtitles" src="subtitles-ko.vtt" srclang="ko" label="한국어" default>
+                    <track kind="subtitles" src="subtitles-en.vtt" srclang="en" label="English">
+                    <p>브라우저가 비디오를 지원하지 않습니다.</p>
+                </video>
+                <!-- 
+                poster: 비디오 썸네일
+                track: 자막 파일 (접근성 중요)
+                -->
+                <figcaption>HTML5 비디오 예시</figcaption>
+            </figure>
+        </section>
+
+        <section id="tables">
+            <h2>6. 테이블 (데이터 표현에 필수)</h2>
+            
+            <!-- 실제 데이터 테이블 예시 -->
+            <table>
+                <caption>2024년 웹 기술 사용 통계</caption>
+                <!-- caption: 테이블 제목 (접근성) -->
+                
+                <thead>
+                    <tr>
+                        <th scope="col">기술</th>
+                        <th scope="col">사용률 (%)</th>
+                        <th scope="col">전년 대비</th>
+                        <th scope="col">순위</th>
+                    </tr>
+                </thead>
+                
+                <tbody>
+                    <tr>
+                        <th scope="row">JavaScript</th>
+                        <td>97.8</td>
+                        <td class="increase">+2.1</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">HTML/CSS</th>
+                        <td>92.4</td>
+                        <td class="increase">+1.5</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Python</th>
+                        <td>51.9</td>
+                        <td class="increase">+4.2</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Java</th>
+                        <td>35.4</td>
+                        <td class="decrease">-1.8</td>
+                        <td>4</td>
+                    </tr>
+                </tbody>
+                
+                <tfoot>
+                    <tr>
+                        <th scope="row">평균</th>
+                        <td>69.4</td>
+                        <td>+1.5</td>
+                        <td>-</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+
+        <section id="code">
+            <h2>7. 코드 관련 태그 (기술 문서에 필수)</h2>
+            
+            <!-- 인라인 코드 -->
+            <p><code>console.log()</code> 함수는 JavaScript에서 디버깅에 사용됩니다.</p>
+            
+            <!-- 코드 블록 -->
+            <pre><code>function greet(name) {
+    return `Hello, ${name}!`;
+}
+
+const message = greet('World');
+console.log(message);</code></pre>
+            
+            <!-- 키보드 입력 -->
+            <p>파일을 저장하려면 <kbd>Ctrl</kbd> + <kbd>S</kbd>를 누르세요.</p>
+            
+            <!-- 변수 표시 -->
+            <p>방정식 <var>ax</var> + <var>by</var> = <var>c</var>에서 해를 구하세요.</p>
+            
+            <!-- 출력 결과 -->
+            <p>계산 결과: <samp>42</samp></p>
+        </section>
+
+        <section id="interactive">
+            <h2>8. 인터랙티브 요소</h2>
+            
+            <!-- 접을 수 있는 내용 (FAQ에서 자주 사용) -->
+            <details>
+                <summary>자주 묻는 질문 1: HTML이란 무엇인가요?</summary>
+                <p>HTML(HyperText Markup Language)은 웹 페이지의 구조를 정의하는 마크업 언어입니다. 텍스트, 이미지, 링크 등의 요소들을 구조화하여 브라우저가 이해할 수 있도록 합니다.</p>
+            </details>
+            
+            <details>
+                <summary>자주 묻는 질문 2: 시맨틱 태그를 왜 사용하나요?</summary>
+                <p>시맨틱 태그는 HTML 문서의 의미를 명확하게 표현하여 검색엔진 최적화(SEO)와 웹 접근성을 향상시킵니다. 또한 코드의 가독성과 유지보수성도 높아집니다.</p>
+            </details>
+            
+            <!-- 진행률 표시 (대시보드에서 사용) -->
+            <div class="progress-container">
+                <label for="progress">프로젝트 진행률:</label>
+                <progress id="progress" value="75" max="100">75%</progress>
+                <span>75%</span>
+            </div>
+            
+            <!-- 측정값 표시 (통계 대시보드에서 사용) -->
+            <div class="meter-container">
+                <label for="disk-usage">디스크 사용량:</label>
+                <meter id="disk-usage" value="6" min="0" max="10" low="3" high="8" optimum="2">
+                    6 out of 10
+                </meter>
+                <span>60% 사용 중</span>
+            </div>
+        </section>
+    </main>
+
+    <aside>
+        <!-- 사이드바 (블로그, 뉴스 사이트에서 사용) -->
+        <h2>관련 링크</h2>
+        <nav>
+            <ul>
+                <li><a href="https://developer.mozilla.org/ko/docs/Web/HTML" target="_blank" rel="noopener">MDN HTML 문서</a></li>
+                <li><a href="https://www.w3.org/TR/html52/" target="_blank" rel="noopener">W3C HTML 스펙</a></li>
+                <li><a href="https://validator.w3.org/" target="_blank" rel="noopener">HTML 유효성 검사기</a></li>
+            </ul>
+        </nav>
         
-        <optgroup label="수도권">
-            <!-- optgroup: 관련 옵션들을 그룹화 -->
-            <option value="seoul">서울</option>
-            <option value="incheon">인천</option>
-            <option value="suwon">수원</option>
-        </optgroup>
-        
-        <optgroup label="지방">
-            <option value="busan">부산</option>
-            <option value="daegu">대구</option>
-            <option value="gwangju">광주</option>
-        </optgroup>
-    </select>
+        <!-- 연락처 정보 -->
+        <section>
+            <h3>문의 사항</h3>
+            <address>
+                <p>이메일: <a href="mailto:contact@example.com">contact@example.com</a></p>
+                <p>전화: <a href="tel:+82-2-1234-5678">02-1234-5678</a></p>
+            </address>
+        </section>
+    </aside>
 
-    <!-- 다중 선택 가능한 select -->
-    <select name="skills" multiple>
-        <!-- multiple: 여러 항목 선택 가능 -->
-        <option value="html">HTML</option>
-        <option value="css">CSS</option>
-        <option value="js">JavaScript</option>
-    </select>
+    <footer>
+        <!-- 푸터 (모든 웹사이트에 필수) -->
+        <div class="footer-content">
+            <p>&copy; 2024 HTML 학습 예제. All rights reserved.</p>
+            <p>최종 수정일: <time datetime="2024-06-16">2024년 6월 16일</time></p>
+            
+            <!-- 소셜 미디어 링크 -->
+            <nav aria-label="소셜 미디어">
+                <a href="https://github.com" target="_blank" rel="noopener" aria-label="GitHub">GitHub</a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn">LinkedIn</a>
+            </nav>
+        </div>
+    </footer>
 
-    <!-- 다양한 버튼 타입 -->
-    <button type="button" onclick="alert('버튼이 클릭되었습니다!')">클릭하세요</button>
-    <button type="button" disabled>비활성화된 버튼</button>
-    <!-- disabled: 버튼 비활성화 -->
-
+    <!-- 
+    스크립트는 body 끝에 위치 (페이지 로딩 성능 최적화)
+    현업에서는 JavaScript 프레임워크나 번들러 사용
+    -->
+    <script>
+        // 폼 검증 예시 (현업에서 필수)
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            console.log('폼이 제출되었습니다.');
+            // 실제로는 AJAX로 서버에 데이터 전송
+        });
+    </script>
 </body>
 </html>
