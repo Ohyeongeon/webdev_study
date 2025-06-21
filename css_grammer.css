@@ -1,5 +1,5 @@
 /* ============================================
-   CSS 기본 문법 정리 (css_grammar.css) | 실무중심
+   CSS 기본 문법 정리 (css_grammar.css)
    ============================================ */
 
 /* CSS란?
@@ -212,6 +212,7 @@ h2 {
    ============================================ */
 
 /* 7-1. Flex Container 설정 */
+/* 부모: Flex Container */
 .flex-container {
     display: flex;
     
@@ -257,7 +258,7 @@ h2 {
   font-size: large; /* 글자크기 */
   font-weight: bold; /* 글자 굵기 */
   text-align: center; /* 텍스트 정렬 */
-  text-decoration: dashed; /* 텍스트 장식 */
+  text-decoration: underline; /* 텍스트 장식 */
   line-height: normal; /* 줄 간격 */
 }
 
@@ -286,3 +287,34 @@ h2 {
   padding: 15px; /* 안쪽 여백 */
   padding-top: 10px; /* 특정 방향으로 여백, 상하좌우 다 있음*/
 }
+
+/* =======================================
+9. 가상 선택자(Pseudo Selectors)
+
+가상 선택자는 html요소의 특정 상태나 구조에 따라 스타일을 다르게 적용할 수 있도록 도와주는 특별한 css선택자. 
+ex) 마우스 올렸을때만 글자 색상을 바꾸기
+======================================== */
+
+/* 9-1 마우스 호버 효과 */
+/* hover는 어떤 요소의 마우스를 올렸을때 스타일이 바뀌도록 해주는 가상 선택자이다 */
+.hover-effect:hover{
+    color:red;
+    background-color: blue;
+    cursor: pointer;
+}
+
+/* 9-2 링크 상태별 스타일 */
+/* 하이퍼링크(a태그)는 상태에 따라 각각 다르게 스타일을 둘 수 있습니다. */
+a:link{ color:blue; } /* 방문하지 않은 링크(:link) */
+a:visited{ color:purple; } /* 이미 방문한 링크(:visited) */
+a:hover{ color:red; } /* 마우스를 올린 링크(:hover) */
+a:active{ color:yellow; } /* 클릭하고 있는링크(:active) */
+
+/* 팁: link, visited, hover, active 순서대로 css를 작성하는게 좋다.
+       또,hover와 active는 빠르게 바뀌므로 효과를 눈에 뜨게 넣어주는게 좋다. */
+
+/* 9-3 구조적 가상 선택자 */
+/* html에서 표나 메뉴처럼 여러개의 요소가 반복될때 특정 위치에 요소만 스타일을 달아주고 싶을때 사용한다. */
+.list-item: first-child{ font-weight: 10px; } /* 첫번째 자식(항목) */
+.list-item: last-child{ font-size: 10px; } /* 마지막 자식(항목) */
+.list-item:nth-child(2n) { text-decoration: underline; } /* n번째 항목 */
