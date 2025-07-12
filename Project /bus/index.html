@@ -1,1 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = 'stylesheet' href = 'style.css'>
+    <title>버스소개페이지</title>
+    <title>Table Text Emphasis</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
 
+
+        .highlight {
+            color: blue; 
+            font-weight: bold;
+        }
+
+        .good {
+            color: rgb(255, 0, 0); 
+            font-weight: bold;
+        }
+        
+    </style>
+   
+</head>
+<body>
+    <p><h1 class = 'c'><ins>버스</ins></h1></p>
+    <ul>
+        <li><a href="#section1">종류 바로가기</a></li>
+        <li><a href="#section2">노선 바로가기기</a></li>
+      </ul>
+    
+    <img src = '버스.jpg' alt = '안돼요' width = '500'>
+    <img src = '버스2.jpg' alt = '안돼요' width = '500'>
+    <h6 class = 'p'>버스 사진입니다.</h6>
+    <dl class = 'bus'>버스<i>(bus, 문화어: 뻐스)</i>는 많은 사람의 운송을 목적으로 하는 운송 수단</dl>
+    <dd>운전기사가 각 버스마다 배치되어 운행한다. 보통은 운임을 받고 정해진 길을 따라 운행한다. 버스는 최대 300명까지의 승객을 수용할 수 있다.</dd>
+    <h3 id = "section1">버스 종류</h3>
+    <ul>
+        <li class ='test'>대형 버스</li>
+        <li>준대형 버스</li>
+        <li>중형 버스</li>
+        <li>준중형 버스</li>
+        <li>경형 버스</li>
+        <li><del>버럭(버스 + 트럭)</del></li>
+        <br>
+        <table>
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>배차 간격</th>
+                    <th>거점</th>
+                    <th>종점</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><span class="highlight">평일</span></td>
+                    <td>15분~40분</td>
+                    <td>04:30~23:00</td>
+                    <td>05:15~23:00</td>
+                    
+                </tr>
+                <tr>
+                    <td><span class="highlight">토요일</span></td>
+                    <td>25~40분	</td>
+                    <td>04:30~23:00	</td>
+                    <td>05:15~23:00</td>
+                </tr>
+                <tr>
+                    <td><span class="highlight">일요일</span></td>
+                    <td>25~40분</td>
+                    <td>04:30~23:00</td>
+                    <td>05:15~23:00</td>
+                </tr>
+                <tr>
+                   <td><span class="good">공휴일</span></td>
+                    <td>25~40분</td>
+                    <td>04:30~23:00</td>
+                    <td>05:15~23:00</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </ul>
+    <h2 id = "section2">23번 버스 노선</h2>
+    <img src = '노선.jpg' alt = '안돼요' width = '800'>
+    <h4>관련 사이트</h4>
+    <li><a href = "https://www.bus.or.kr/" target = "_blank">전국버스운성사업조합연합회</a></li>
+    <li><a href = "https://www.gbis.go.kr/" target = "_blank">경기버스정보</a></li>
+    <li><a href = "https://www.bustago.or.kr/newweb/kr/index.do" target = "_blank">버스타고</a></li>
+    <li><a href = "https://topis.seoul.go.kr/map/openBusMap.do" target = "_blank">서울버스정보조회</a></li><br>
+
+    <form action="#" method="post">
+        <fieldset>
+            <legend>개인 정보</legend>
+            <label for="name">이름:</label>
+            <input type="text" id="name" name="name"><br><br>
+            
+            <label for="description">설명:</label><br>
+            <textarea id="description" name="description" rows="7" cols="40" placeholder="당신은 버스를 좋아하십니까?" maxlength="200"></textarea><br><br>
+            
+            <label for="gender">성별:</label>
+            <select id="gender" name="gender">
+                <option value="male">남성</option>
+                <option value="female">여성</option>
+                <option value="other">동물(기타)</option>
+            </select><br><br>
+            
+            <button type="submit">제출하기</button>
+        </fieldset>
+    </form>
+</body>
+</html>
