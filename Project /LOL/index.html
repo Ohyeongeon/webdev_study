@@ -5,32 +5,82 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../project02/media/favicon.ico" type='image/x-icon' />
     <title>롤 소개 페이지</title>
+    <style>
+        .hover-img {
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-radius: 24px;
+        }
+        .hover-img:hover {
+            transform: scale(1.08);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.21);
+            cursor: pointer;
+        }
+        
+    </style>
 </head>
-<body>
+<body style='background-color: wheat;'>
     <h1>롤이란?</h1>
     <p>리그 오브 레전드는 5명의 강력한 챔피언으로 구성된 양 팀이 서로의 기지를 파괴하기 위해 치열한 사투를 벌이는 전략 게임입니다. </p>
-    <img src="../project02/media/롤 사진.jpg" alt="롤 사진" width="600">
-
-    <h2>롤 티어 순서</h2>
-
+    <a href="https://www.leagueoflegends.com/ko-kr/">
+        <img class="hover-img" src="../project02/media/롤 사진.jpg" alt="롤 사진" width="600">
+    </a>
+    <h2 style = 'font-style: oblique;'>롤 티어 순서</h2>
     <ul>
         <table>
             <tbody>
                 <tr>
-                    <th>아이언 ➡️</th>
-                    <th>브론즈 ➡️</th>
-                    <th>실버 ➡️</th>
-                    <th>골드 ➡️</th>
-                    <th>플래티넘 ➡️</th>
-                    <th>에매랄드 ➡️</th>
-                    <th>다이아몬드 ➡️</th>
-                    <th>마스터 ➡️</th>
-                    <th>그랜드 마스터 ➡️</th>
-                    <th><h3>챌린저👑</h3></th>
+                    <th style='color: gray;'>아이언 ➡️</th>
+                    <th style='color: brown;'>브론즈 ➡️</th>
+                    <th style='color: silver;'>실버 ➡️</th>
+                    <th style='color: gold;'>골드 ➡️</th>
+                    <th style='color: rgb(53, 43, 255);'>플래티넘 ➡️</th>
+                    <th style='color: green;'>에매랄드 ➡️</th>
+                    <th style='color: rgb(90, 90, 255);'>다이아몬드 ➡️</th>
+                    <th style='color: rgb(134, 43, 226);'>마스터 ➡️</th>
+                    <th style='color: rgb(158, 2, 2);'>그랜드 마스터 ➡️</th>
+                    <th style='color: rgb(74, 155, 225);'><h3>챌린저👑</h3></th>
                 </tr>
             </tbody>
         </table>
     </ul>
+    
+    <h2 style = 'font-style: oblique;'>게임 종류</h2>
+    <h3 style="color:darkgreen;font-style: oblique;">소환사의 협곡</h3>
+    <p>롤을 입문한 유저가 플레이하는 시간 동안 한 평생 체험하게 될 가장 기본적인 맵으로, 특별한 이벤트를 제외하면 대부분의 공식 대회에서 유일하게 지원하는 맵이다. 그만큼 리그 오브 레전드에 등장하는 맵들 중에서도 독보적으로 인지도가 높다.</p>
+           
+          
+    <h3 style = 'color: rgb(1, 157, 157);font-style: oblique;'>무작위 총력전</h3>
+    <p>리그 오브 레전드의 게임 모드. 밴픽 규칙으로 무작위 선택이 적용되어 모든 플레이어가 챔피언을 랜덤으로 선택하게 되며, 중립 지역이 없고 공격로가 단 하나이기에 게임 시작부터 끝까지 대치와 한타가 이어지는 방식이다. 때문에 다양한 챔피언 조합이 등장하며, 기존 소환사의 협곡의 복잡한 운영과 긴 초반 라인전 단계를 생략하고 게임 시간 내내 한타를 즐길 수 있는 방식으로 고정적인 인기가 있다.</p>
+        
+    <h3 style = 'color: peru;font-style: oblique;'>전략적 팀 전투</h3>
+    <p>라이엇 게임즈에서 개발한 오토배틀러 게임. 게임 명칭 "Teamfight Tactics"의 앞 철자들을 딴 TFT가 공식 약칭이다. 한국어 명칭으로는 "전략적 팀 전투"를 공식적으로 사용하고 있으나 이렇게 부르는 사람은 거의 없으며 대부분은 롤토체스(롤+오토 체스), 더 줄여서 롤토나 롤체로 불린다.</p>
+             
+
+    <br><h2>챔피언</h2>
+
+    <p>리그 오브 레전드에서 각 플레이어가 조작하는 캐릭터다.</p>
+
+    <br><h2>라인</h2>
+
+    <h2>탑</h2>
+    <img src = '../MEDIA/탑.svg' alt = '탑 사진' width = '100'>
+    <p>탑은 소환사의 협곡에서 EU 스타일 포지션 중 상단 라인에서 챔피언을 플레이하는 포지션을 지칭한다.</p>
+
+    <h2>정글</h2>
+    <img src = '../MEDIA/정글.svg' alt = '정글 사진' width = '100'>
+    <p>정글러의 인게임 공식 명칭은 '정글 사냥꾼'으로 중립 지역의 몬스터를 사냥해 성장하며 맵 전체에 개입하는 방식으로 운용하는 포지션이다.</p>
+
+    <h2>미드</h2>
+    <img src = '../MEDIA/미드.svg' alt = '미드 사진' width = '100'>
+    <p>미드는 소환사의 협곡에서 EU 스타일 포지션 중 중단 공격로에 서는 포지션이다.</p>
+
+    <h2>봇</h2>
+    <img src = '../MEDIA/봇.webp' alt = '봇 사진' width = '100'>
+    <p>바텀은 EU 메타와 소환사의 협곡의 구역 중 하단 라인에서 서포터와 듀오를 이루는 공격로 라이너를 지칭한다.</p>
+
+    <h2>서포터</h2>
+    <img src = '../MEDIA/서폿.svg' alt = '서포터 사진' width = '100'>
+    <p>서포터는 소환사의 협곡에서 팀을 전반적으로 보조하고, 바텀을 비롯하여 팀을 전반적으로 보조하는 역할군이자 지원가에 해당하는 포지션이다.</p>
 
     
 </body>
