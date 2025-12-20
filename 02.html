@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method = 'get'>
+        id:<input type = 'text' name = 'search' placeholder = '이름 입력'> <br>
+        pw:<input type = 'password' size = '15'>
+        <input type = 'submit'> <!--name은 폼의 이름 지정, action은 데이터르 처리할 웹 서버 응용 프로그램의 이름, method는 폼 데이터르 웹 서버로 전송하는 형식 target은 웹 서버로 부터 전송받은 데이터를 출력할 윈도우 이름-->
+    </form>
+    <!--get방식은 주소에 데이터를 입력해서 전달, 크기가 한정됨.-->
+    <!--get방식은 url주소 뒤에 파라미터를 붙여서 데이터를 전달하는 방식. 글자 수 제한 2048. **비밀 보장 안됨**. 그래서 password데이터는는 post방식을 사용함. get방식일때는 북마크랑 뒤로가기가 가능하다-->
+
+    <!--post방식은 주소르 변경하지 않고 비밀스럽게 데이터를 전달, 그리고 용량제한이 없다. 사용자가 입력한 데이터를 url주소에 포함시키지 않고 http request 헤더에 포함시켜서 전송하는 방식. 길이제한 없고 보안히 유지 jsp파일에서 내장객체 request를 사용하기 이전에 메소드 request.setCharaceterEncoding(“euc-kr”)을 호출-->
+
+    <form name = '이름'> <!--action 속성은 form 데이터를 처리할 웹서버 응용프로그램의 이--> <!--method는 form데이터를 웹서버로 전송하는 방식 get이랑 post가 있다.-->
+        
+    </form>
+    <table border="2px">
+        <tr>
+            <td>
+                <img src = '../review/MEDIA/표.png'height = '400px' width="400">
+            </td>
+            <td>
+                <img src = '../review/MEDIA/표2.png' height = '470px' width="470">
+            </td>
+        </tr>
+    </table>
+    <form> <!--사용자가 입력하는 입력양식-->
+        <input type = 'text' name = 'text' value = 'text'><br>
+        <input type = 'password' name = 'password' value = 'password'><br>
+        <input type = 'file' name = 'file' value="file"><br>
+        <input type = 'checkbox' name = 'checkbox' value="checkbox"><br>
+        <input type = 'radio' name = 'radio' value="radio"><br>
+
+        <!--보이지 않는 입력양식-->
+        <input type = 'hidden' name="hidden" value="hidden"><br>
+
+        <!--버튼-->
+        <input type="button" name = 'button' value="button"><br>
+        <input type="reset" name = 'reset' value = 'reset'><br>
+        <input type="submit" name = 'submit' value = 'submit'><br>
+        <input type="image" src = '../basic/media/리신 사진.jpg' height="300" width="300"><br>
+        
+    </form>
+    <!--label 태그-->
+    <form>
+        <label for = 'name'>이름:</label>
+        <input id = 'name' type = 'text'><!--for랑 id는 같이 쓰임 label에서는 for, input에서는 id-->
+        <label>id:<input type = 'text'></label>
+    </form>
+    <form>
+        <label for ='name'>이름</label>
+        <input id = 'name' type = 'text'><br>
+        <span>성별</span>
+        <input type = 'radio' name = 'gender' id = 'm' value="m">
+        <label for = 'm'>남자</label>
+        <input type = 'radio' name = 'gender' id = 'f' value="f">
+        <label for = 'f'>여자</label><br>
+        <input type="button" name = '가입' value="가입">
+    </form>
+</body>
+</html>
