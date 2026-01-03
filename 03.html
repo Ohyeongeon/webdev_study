@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css"> <!--외부 스타일 시트-->
+    <style> /*내부 스타일 시트*/
+        * {color: pink;} /*전체 선택자: 모든 태그를 일괄적으로 선택하고 싶을떄 사용*/
+        h1 {color: red;} /*태그 선택자: 태그마다 지정해 주고 싶을떄 사용*/
+        #o {width: 800px; margin: 0 auto; background: darkgray; } /*id 선택자: 따로따로 하고싶은 것만 적용할떄 사용하거나 블록으로 공간분할 태그의 id속성에 주로 적용*/
+        #c {width: 800px; margin: 0 auto; background: grey;}
+        #l {width: 200px; background: lightgrey; }
+        .dd {color: orange;} /*class 선택자 따로따로 하고 싶은것만 적용할때 사용하거나 공백으로 구분된 요소애 class를 여러 개 사용함*/
+        input[type = 'text']{background: red;} /*속성 선택자*/
+    </style>
+</head>
+<body>
+    <div id = 'o'><h2>안녕하세요</h2></div>
+    <div id = 'c'><div id = 'p'><h3>hi</h3></div></div>
+    <div id = 'l'><h3>안녕하세요오오오</h3></div>
+    <ul>
+        <li class = 'dd'>ㅎㅇ</li>
+        <li>ㅂㅇ</li>
+        <li class = 'dd'>ggdd</li>
+    </ul>
+</body>
+</html>
