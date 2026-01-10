@@ -13,6 +13,16 @@
         #l {width: 200px; background: lightgrey; }
         .dd {color: orange;} /*class 선택자 따로따로 하고 싶은것만 적용할때 사용하거나 공백으로 구분된 요소애 class를 여러 개 사용함*/
         input[type = 'text']{background: red;} /*속성 선택자*/
+        #o h2 {color:black;} /*후손 선택자*/
+        #i > h1 {color:brown;}
+        table > tbody > tr > th {color:blue;}
+        h1:hover {color:rgb(0, 119, 255);} /*hover는 태그 위에 마우스 커서를 올린 상태, active는 태그를 마우스 커서로 클릭한 상태*/
+        h2:active {color:blueviolet;}
+        input:disabled {background-color: black;}
+        li:first-child {color:blue;}
+        li:last-child {color:red;}
+        li:nth-child(2) {color:yellow;}
+        li:nth-last-child(2) {color:green;}
     </style>
 </head>
 <body>
@@ -23,6 +33,37 @@
         <li class = 'dd'>ㅎㅇ</li>
         <li>ㅂㅇ</li>
         <li class = 'dd'>ggdd</li>
+    </ul>
+    <div id = 'i'>
+        <h1>감사합니다</h1> 
+    </div>
+    <div>
+        <table border = '1'> <!--table태그에는 자동으로 tbody 태그가 추가된다. table태그에 스타일을 적용할때는 자손 선택자를 사용하지 않아야한다.-->
+            <tr>
+                <th>이름</th>
+                <th>지역</th>
+            </tr>
+            <tr>
+                <td>윤인성</td>
+                <td>서울특별시 강남구 내발산동</td>
+            </tr>
+        </table>
+    </div>
+    <h1>고맙습니다</h1>
+    <h2>고맙습니다2</h2>
+    <img src = '../review/MEDIA/상태선택자.png' width = '600' height = '300'>
+    <label for = 'm'>남자</label>
+    <input type = 'text' name = 'gender' id = 'm' value = 'm' disabled>
+    <label for = 'f'>여자</label>
+    <input type = 'text' name = 'gender' id = 'f' value ='f'>
+
+    <ul>
+        <li>가</li>
+        <li>나</li>
+        <li>다</li>
+        <li>가</li>
+        <li>나</li>
+        <li>다</li>
     </ul>
 </body>
 </html>
