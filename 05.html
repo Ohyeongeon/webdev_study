@@ -1,48 +1,37 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .a12334444444{
-            position:static; /*기본, 웹 페이지가 작성된 순서대로 html태그의 출력 위치를 정하는 방식, 정적 배치*/
-            position: relative; /*기본 위치에서 상하좌우 속성의 값만큼 이동한 위치, 상대 배치*/
-            position: absolute; /*부모태그 안에서의 상대 좌표를 기준으로 한 위치, 절대 배치*/
-            position: fixed; /*브라우저의 보이는 영역(뷰포트)의 고정위치, 고정배치*/
-            float: left; /*항상 같은 위치에서 출력, 유동배치*/
-        }
-        .box{
+        .b{
             width: 100px;
             height: 100px;
-            position: absolute;
-        }
-        .box:nth-child(1){
-            background-color: red;
-            left: 10px;
-            top:10px;
-            z-index: 100; /*숫자가 클수록 앞에 있게하는 속성*/
-        }
-        .box:nth-child(2){
-            background-color: blue;
-            left: 50px;
-            top:50px;
-            z-index: 98;
-        }
-        .box:nth-child(3){
             background-color: yellow;
-            left: 90px;
-            top:90px;
-            z-index: 99;
+            margin: 10px;
+            padding: 10px;
+            float: right;
+            box-shadow: 5px 5px 7px purple;
+            
+        }
+        h1{
+            text-shadow: 5px 5px 3px yellow, 7px 7px 5px orange, 10px 10px 8px red;
+            
+        }
+        .a{
+            width: 100px;
+            height: 100px;
+            /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#cb60b3+0,fff600+25,c146a1+51,fff600+77,db36a4+100 */
+            background: linear-gradient(to bottom,  rgba(203,96,179,1) 0%,rgba(255,246,0,1) 25%,rgba(193,70,161,1) 51%,rgba(255,246,0,1) 77%,rgba(219,54,164,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+
         }
     </style>
 </head>
 <body>
-    
-    <div class = 'box'></div>
-    <div class = 'box'></div>
-    <div class = 'box'></div>
-    <img src = '../review/MEDIA/포지션.png' width="700" height="250">
-    <img src = '../review/MEDIA/포지션 스타일.png'>
+    <div class = 'b'></div>
+    <div class = 'b'></div>
+    <div class = 'a'></div>
+    <h1>안녕하세요</h1>
 </body>
 </html>
