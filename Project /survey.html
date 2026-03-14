@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html,body{
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        header{
+            background-color: rgb(255, 191, 191);
+            text-align: center;
+            overflow: hidden;
+            
+        }
+        legend{
+            color:blue;
+            font-weight: 600;
+        }
+        em{
+            color:red;
+        }
+        .span{
+            float:left;
+            font-size: 16px;
+            width: 120px;
+            font-weight: 700;
+        }
+        #op{
+            text-align: center;
+        }
+        .mm{
+            text-align: center;
+            font-weight: bold;
+        }
+        footer{
+            font-size: larger;
+            background-color: violet;
+            height: 10%;
+            text-align: center;
+            overflow: hidden;
+        }
+        section{
+            background-color: rgb(209, 230, 238);
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+        <header>
+            <h1>설문지</h1>
+            <article><p>소프트웨어 기술에 대한 의견을 듣습니다. 많은 참여 부탁드립니다.</p></article>
+        </header>
+        <section>
+            <form>
+                <fieldset>
+                    <legend>설문 내용</legend>
+
+                    <span class="span">학년<em>*</em></span>
+                    <input type="radio" name = 'grade' id = '1' value = '1'>
+                    <label for ='1'>1학년</label>
+                    <input type="radio" name = 'grade' id = '2' value = '2'>
+                    <label for ='2'>2학년</label>
+                    <input type="radio" name = 'grade' id = '3' value = '3'>
+                    <label for ='3'>3학년</label><br><br>
+
+                    <span class = 'span'>성별 <em>*</em></span>
+                    <input type="radio" name = 'gender' id = 'm' value = 'm'>
+                    <label for ='m'>남자</label>
+                    <input type="radio" name = 'gender' id = 'f' value = 'f'>
+                    <label for ='f'>여자</label><br><br>
+
+                    <span class = 'span'>관심 분야 <em>*</em></span>
+                    <select id = 'g' name = 'g'>
+                        <option value = 'digital'>디지털 콘텐츠 및 가상 현실</option>
+                    </select><br><br>
+
+                    <span class = 'span'>진로(다중 선택)<em>*</em></span>
+                    <input type="checkbox" name = '개발' id = '개발'>
+                    <label for ='개발'>개발</label>
+                    <input type="checkbox" name = '개발' id = '기획'>
+                    <label for ='기획'>기획</label>
+                    <input type="checkbox" name = '개발' id = '영업'>
+                    <label for ='영업'>영업</label>
+                    <input type="checkbox" name = '개발' id = '창업'>
+                    <label for ='창업'>창업</label><br><br>
+
+                    <span class = 'span'>남기고 싶은 말</span><br>
+                    <textarea id = 'dis' name = 'dis' rows = '10' cols = '50' placeholder="글로 남겨주세요"></textarea><br>
+                </fieldset>
+                <fieldset id = 'op'>
+                    <button type = 'submit' class = 'mm'>제출 하기</button>
+                    <button type = 'reset' class = 'mm'>다시 쓰기</button>
+                </fieldset>
+            </form>
+        </section>
+        <footer>
+            <p>Copyright 2026 by hyeongeon</p>
+        </footer>
+</body>
+</html>
