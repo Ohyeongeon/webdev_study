@@ -28,3 +28,115 @@ node.js를 통해 서버 개발이 가능하다.(node.js는 크롬v8엔진으로
 
 4. 머신러닝
 tensorflow란 구글에서 만든 딥러닝 프로그램이다. 대게 파이썬으로 개발이 되지만 JS도 지원해서 사용은 가능하다.
+
+//1. 자바스크립트 기본 문법
+//변수와 상수(let, const)
+let a = 10; //let은 내용을물 바꿀 수 있는 변수 선언 방법
+console.log(a);
+const b = 20; //내용물을 바꿀 수 없는 선언 방법
+
+//자료형
+let age = 18; //숫자, 따옴표 없이 그냥 씀, 수학적 계산 가능
+//infinity 무한대 ex) 10/0
+//NaN(not a number) 수학 계산이 불가능할떄 나오는 값
+
+let school = '군서고'; //문자, 따옴표 감싸 표현한다
+//문자를 작성하는 방법이 'a', "a", `a`가 있다. 이중 백틱(``) 방식이 가독성이 좋아서 실무에서 가장 많이 쓰인다
+console.log(school.repeat(5));
+let f = false; // 참과 거짓 두개만 존재
+
+//undefined: 정의되지 않음(상자에 아무것도 없음)
+let und;
+console.log(und);
+
+//null: 비어있음(상자에 아무것도 넣지 않겠다는 메모만 존재)
+let n = null;
+console.log(n);
+
+//연산자 
+//사칙연산 +, -, *,/ (문자열 더하기는 가능 예를들어 '안녕'+'하세요')
+//비교 연산자 ===(양쪽이 완전히 같은가), !==(양쪽이 다른가), <, >, <=, >=
+
+let name = '오현건';
+let age2 = 18;
+let job = '학생';
+console.log('제 이름은 ' + name + '이고 나이는 ' + age2 + '살이고 직업은 ' + job + '입니다.')
+
+//1. 조건문
+
+let v = `안녕하세요`;
+if (v === `안녕하세요`){
+    console.log(1000);
+}
+else if (v === `안녕히가세요`){
+    console.log(100000);
+}
+else{
+    console.log(10)
+}
+
+
+//값이 완벽하게 똑같나를 찾는 switch문
+
+switch (v){
+    case '안녕히가세요':
+        console.log(100000);
+        break;
+    case '안녕하세요':
+        console.log(10);
+        break;
+    default:
+        console.log(10);
+}
+
+//2. 반복문
+
+for (let i = 0; i < 10; i+=2){
+    console.log(i);
+    
+}
+
+while (age <= 100){
+    console.log('살아잇는');
+    age++;
+}
+
+//3. 함수
+
+ff = 10
+function fun(ff){
+    console.log(ff*5);
+}
+fun(1);
+
+function fruit(apple){
+    let juice = apple + ' juice';
+    return(juice);
+}
+
+const add = (a, b)=>{
+    return a+b;
+}
+
+
+
+const calculator = (a, b, c)=>{
+    switch(b){
+        case '+':
+            return a+c;
+            break;
+        case '-':
+            return a-c;
+            break;
+        case '*':
+            return a*c;
+            break;
+        case '/':
+            return a/c;
+            break;
+        default:
+            return '이상한거 씀'
+    }
+}
+
+console.log(calculator(10,'+',1000))
