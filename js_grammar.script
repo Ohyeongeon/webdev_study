@@ -126,7 +126,7 @@ console.log(qq);
 qq.splice(1,1);
 console.log(qq);
 
-let ww = {
+const ww = {
     name: 'hyeongeon',
     age: 18,
     isstudent: true
@@ -138,5 +138,119 @@ let train = [
     {name: '김영희', age: 28, ticket: false},
     {name: '오현건', age: 18, ticket: true}
 ];
+train[0].name = 'oo';
+ww.name = '김덕배';
+ww.gender = 'man';
+delete ww.isstudent;
+const mm = Object.keys(ww);
+console.log(mm);
+
+console.log(ww);
 
 console.log(train[2].age);
+for (let i = 0; i < train.length; i++) {
+    console.log(i + "번 승객 - 이름: " + train[i].name + ", 나이: " + train[i].age + ", 티켓유무: " + train[i].ticket);
+}
+
+
+const pp = prompt('이름이 무엇인가요?');
+alert(pp);
+
+
+//DOM이란, html에서 그린 설계도를 읽고 JS가 조종할 수 있도록 조종용 복제본을 하나 만들어주고 이 복제본들의 집합을 DOM이라고 한다//
+let mytitle = document.querySelector('#title');
+let mybutton = document.querySelector('.btn');
+
+mytitle.textContent = '안녕';
+
+
+//서버 관련 내용//
+
+//동기(javascript)는 이전 코드가 완전히 끝날때까지 다음 코드가 기다리고 실행되는 방식이고, 비동기(서버통신)는 오래 걸리는 작업을 시작만 해놓고 결과물이 도착하기 전에 다음코드를 실행하는 것이다.
+
+//서버에서 데이터 가져오기: fetch, async, await
+//fetch: 괄호 안에 인터넷 주소를 쓰고 보내는 명령어
+//async: 함수 앞 예약어(function 앞에 비동기로 쓴다는 의미로 async를 쓴다)
+//await: async가 붙은 함수 안에서만 쓸 수 있다. fetch 앞에 await를 안 붙이면 바로 다음 줄로 넘어가 버려서 빈 상자만 남게된다.
+
+async function get_data() {
+    try{
+    let response = await fetch('https://example.com');
+    let data = await response.json();
+//try-catch는 에러가 발생 했을때 프로그램이 먹통이 되지 않도롤 하는 문법이다. try에는 원래 실행할 코드를 넣고 catch에는 에러가 발생했을 때 출력할 코드를 넣는다.
+
+    console.log(data);
+    }
+    catch(error){
+        console.log('데이터를 가져 오는데 실패했습니다.' + error);
+    }
+
+}
+get_data();
+
+
+//내 컴퓨터에 데이터 저장하기:
+localStorage.setItem('name', '홍길동');
+
+//데이터 꺼내오기:
+let d = localStorage.setItem('name', '김철수');
+console.log(d);
+
+//데이터 삭제하기:
+localStorage.removeItem('name');
+
+//주의 사항: setItem뒤에 텍스트(문자열)로만 써야함.
+
+let Todo1 = ["1","2"];
+//localStorage.setItem("todoData", Todo); (X)
+let 변수명 = JSON.stringify(Todo); //객체나 배열을 그대로 집어 넣으면 컴퓨터가 이헤를 못해서 파일이 꺠져서 강제로 텍스트로 압축해서 넣어야한다.
+localStorage.setItem("todoData", 변수명); //텍스트로 압축하는 것
+let 변수명2 = localStorage.getItem("todoData"); //데이터를 꺼내 오는것
+let 변수명3 = JSON.parse(변수명2) //압축을 푸는것
+JSON.stringify() //배열을 텍스트 형태로 압축하라는 뜻
+JSON.parse() //압축된 텍스트를 다시 배열 형태로 되돌려라는 뜻
+
+//프레임 워크 배우가 전 필요한 개념
+
+let user = { name: "홍길동", age: 20, job: "개발자" };
+//옛날 방식
+let name1 = user.name;
+//요즘 방식
+const {name2, age3} = user;
+
+//스프레드 연산자: 배열이나 객체의 값들을 펼쳐서 다른 곳에 복사하거나 합치는 기호
+
+let Todo = ['1', '2'];
+let Todo2 = ['3', '4'];
+let combine = [...Todo, ...Todo2]; //Todo와 Todo2가 합쳐짐(...은 스프레드 혹은 점점점이라고 읽는다.)
+
+//스크립트 태그 하나 안에 코드를 다 적었으면 이걸 기능별로 .js 파일로 나누고 조립해서 쓰는 방법:
+//export와 import
+//export와 import를 사용하는 이유는 만들려는 프로그램의 기능을 하나의 파일에 전부 만들지 않고 각각 따로 만들어서 파일로 저장해두고 필요할 때마다 불러와서 사용해 코드를 쪼개기 위해서이다
+
+//export: 내보낼때 쓰는 것
+export const PI = 3.14;
+export const add1 = (a, b) => a + b;
+
+//export default: 파일에서 가장 중요한 기능을 내보낼 때 쓴다.
+export default function Calculator() {}
+
+//-> 컴포넌트라는걸 만들 때 사용하는 방식
+
+// './'가 현재 폴더라는 뜻
+
+//import (파일명) from '경로'; 파일로부터 파일명을 가져오는것
+//import {PI, add} from "경로"; 파일에서 일치하는 변수를 가진 것들만 가져온다는 뜻(이름이 무조건 일치해야함.)
+//import 원하는 이름: export default 대표 가져올때 중괄호 없이 가져옴. 이름도 맘대로 할 수 있음
+
+//이벤트 위임 - Event Delegation
+
+const ul = document.querySelector("#todo-list");
+
+ul.addEventListener("click", function(event) {
+        if(event.target.tagName === "LI") {
+        event.target.style.color = 'lightgray';
+        }
+});
+
+//코드가 너무 길어질 때 메모리를 낭비하지 않게 하려고 이벤트 위임을 한다.
