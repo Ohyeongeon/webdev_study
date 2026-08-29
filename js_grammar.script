@@ -1,4 +1,8 @@
-//1. 자바스크립트 기본 문법
+// =========================//
+//자바스크립트 기본 문법 정리//
+//==========================//
+
+
 //변수와 상수(let, const)
 let a = 10; //let은 내용을물 바꿀 수 있는 변수 선언 방법
 console.log(a);
@@ -111,10 +115,13 @@ const calculator = (a, b, c)=>{
 console.log(calculator(10,'+',1000))
 
 
+//length는 길이를 나타내고, push는 리스트의 마지막에 추가로 무언가를 집어넣는 것을 의미한다//
 let qq = ['apple', 'grape', 'peach'];
 console.log(qq[0]);
 console.log(qq.length);
 qq.push('melon');
+
+
 
 qq.pop();
 qq.unshift('water melon')
@@ -126,6 +133,8 @@ console.log(qq);
 qq.splice(1,1);
 console.log(qq);
 
+
+//객체와 배열 예제//
 const ww = {
     name: 'hyeongeon',
     age: 18,
