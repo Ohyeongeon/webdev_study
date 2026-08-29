@@ -1,42 +1,43 @@
-// =========================//
-//자바스크립트 기본 문법 정리//
-//==========================//
-
-
-//변수와 상수(let, const)
-let a = 10; //let은 내용을물 바꿀 수 있는 변수 선언 방법
+// 1. 자바스크립트 기본 문법
+// 변수와 상수(let, const)
+let a = 10; // let은 내용을물 바꿀 수 있는 변수 선언 방법
 console.log(a);
-const b = 20; //내용물을 바꿀 수 없는 선언 방법
+const b = 20; // 내용물을 바꿀 수 없는 선언 방법
 
-//자료형
-let age = 18; //숫자, 따옴표 없이 그냥 씀, 수학적 계산 가능
-//infinity 무한대 ex) 10/0
-//NaN(not a number) 수학 계산이 불가능할떄 나오는 값
+// 자료형
+let age = 18; // 숫자, 따옴표 없이 그냥 씀, 수학적 계산 가능
+// infinity 무한대 ex) 10/0
+// NaN(not a number) 수학 계산이 불가능할떄 나오는 값
 
-let school = '군서고'; //문자, 따옴표 감싸 표현한다
-//문자를 작성하는 방법이 'a', "a", `a`가 있다. 이중 백틱(``) 방식이 가독성이 좋아서 실무에서 가장 많이 쓰인다
+let school = '군서고'; // 문자, 따옴표 감싸 표현한다
+// 문자를 작성하는 방법이 'a', "a", `a`가 있다. 이중 백틱(``) 방식이 가독성이 좋아서 실무에서 가장 많이 쓰인다
 console.log(school.repeat(5));
 let f = false; // 참과 거짓 두개만 존재
 
-//undefined: 정의되지 않음(상자에 아무것도 없음)
+// undefined: 정의되지 않음(상자에 아무것도 없음)
 let und;
 console.log(und);
 
-//null: 비어있음(상자에 아무것도 넣지 않겠다는 메모만 존재)
+// null: 비어있음(상자에 아무것도 넣지 않겠다는 메모만 존재)
 let n = null;
 console.log(n);
 
-//연산자 
-//사칙연산 +, -, *,/ (문자열 더하기는 가능 예를들어 '안녕'+'하세요')
-//비교 연산자 ===(양쪽이 완전히 같은가), !==(양쪽이 다른가), <, >, <=, >=
+// 연산자 
+// 사칙연산 +, -, *,/ (문자열 더하기는 가능 예를들어 '안녕'+'하세요')
+// 비교 연산자 ===(양쪽이 완전히 같은가), !==(양쪽이 다른가), <, >, <=, >=
 
 let name = '오현건';
 let age2 = 18;
 let job = '학생';
-console.log('제 이름은 ' + name + '이고 나이는 ' + age2 + '살이고 직업은 ' + job + '입니다.')
+// 예전 방식의 문자열 결합
+console.log('제 이름은 ' + name + '이고 나이는 ' + age2 + '살이고 직업은 ' + job + '입니다.');
 
-//1. 조건문
+// 템플릿 리터럴 변수 삽입 (${})
+// 문자열 중간에 더하기(+) 없이 변수를 바로 꽂아 넣는 실무 방식
+console.log(`제 이름은 ${name}이고 나이는 ${age2}살이고 직업은 ${job}입니다.`);
 
+
+// 1. 조건문
 let v = `안녕하세요`;
 if (v === `안녕하세요`){
     console.log(1000);
@@ -45,12 +46,10 @@ else if (v === `안녕히가세요`){
     console.log(100000);
 }
 else{
-    console.log(10)
+    console.log(10);
 }
 
-
-//값이 완벽하게 똑같나를 찾는 switch문
-
+// 값이 완벽하게 똑같나를 찾는 switch문
 switch (v){
     case '안녕히가세요':
         console.log(100000);
@@ -62,11 +61,19 @@ switch (v){
         console.log(10);
 }
 
-//2. 반복문
+// 삼항 연산자와 단축 평가 (React 조건부 렌더링 필수)
+let isLogin = true;
+// 삼항 연산자: 조건 ? 참일때 : 거짓일때 (if문 대신 짧게 씀)
+let loginMessage = isLogin ? "환영합니다" : "로그인해주세요";
+console.log(loginMessage);
 
+// 단축 평가(&&): 앞이 참(true)일 때만 뒤를 실행
+isLogin && console.log("마이페이지 버튼이 표시됩니다.");
+
+
+// 2. 반복문
 for (let i = 0; i < 10; i+=2){
     console.log(i);
-    
 }
 
 while (age <= 100){
@@ -74,8 +81,8 @@ while (age <= 100){
     age++;
 }
 
-//3. 함수
 
+// 3. 함수
 ff = 10
 function fun(ff){
     console.log(ff*5);
@@ -90,8 +97,6 @@ function fruit(apple){
 const add = (a, b)=>{
     return a+b;
 }
-
-
 
 const calculator = (a, b, c)=>{
     switch(b){
@@ -111,35 +116,46 @@ const calculator = (a, b, c)=>{
             return '이상한거 씀'
     }
 }
+console.log(calculator(10,'+',1000));
 
-console.log(calculator(10,'+',1000))
 
-
-//length는 길이를 나타내고, push는 리스트의 마지막에 추가로 무언가를 집어넣는 것을 의미한다//
+// 4. 배열과 객체
 let qq = ['apple', 'grape', 'peach'];
 console.log(qq[0]);
 console.log(qq.length);
 qq.push('melon');
 
-
-
 qq.pop();
-qq.unshift('water melon')
-qq.shift()
-console.log(qq.indexOf('mango'))
-
-console.log(qq.includes('grape'))
+qq.unshift('water melon');
+qq.shift();
+console.log(qq.indexOf('mango'));
+console.log(qq.includes('grape'));
 console.log(qq);
 qq.splice(1,1);
 console.log(qq);
 
+// 배열 순회와 가공 (map, filter) - React 리스트 출력 필수 메서드
+let numList = [1, 2, 3, 4, 5];
+// map: 배열 요소를 하나씩 꺼내서 조작 후 '새 배열'로 반환
+let doubled = numList.map(n => n * 2); 
+console.log(doubled); // [2, 4, 6, 8, 10]
+// filter: 조건에 맞는 요소만 걸러내어 '새 배열'로 반환
+let evens = numList.filter(n => n % 2 === 0); 
+console.log(evens); // [2, 4]
 
-//객체와 배열 예제//
+
 const ww = {
     name: 'hyeongeon',
     age: 18,
     isstudent: true
 };
+
+// 객체 속성 단축명 (Property Shorthand)
+// 넣으려는 변수 이름과 객체의 키(Key) 이름이 같을 때 생략 가능
+let myName = "철수";
+let myAge = 25;
+let newPerson = { myName, myAge }; // { myName: "철수", myAge: 25 } 와 동일
+
 
 let train = [
     {name: '홍길동', age: 48, ticket: true}, 
@@ -162,104 +178,99 @@ for (let i = 0; i < train.length; i++) {
 }
 
 
+// 5. 브라우저 제공 기능 및 DOM
 const pp = prompt('이름이 무엇인가요?');
 alert(pp);
 
-
-//DOM이란, html에서 그린 설계도를 읽고 JS가 조종할 수 있도록 조종용 복제본을 하나 만들어주고 이 복제본들의 집합을 DOM이라고 한다//
+// DOM이란, html에서 그린 설계도를 읽고 JS가 조종할 수 있도록 조종용 복제본을 하나 만들어주고 이 복제본들의 집합을 DOM이라고 한다//
 let mytitle = document.querySelector('#title');
 let mybutton = document.querySelector('.btn');
 
 mytitle.textContent = '안녕';
 
 
-//서버 관련 내용//
+// 6. 서버 관련 내용//
+// 동기(javascript)는 이전 코드가 완전히 끝날때까지 다음 코드가 기다리고 실행되는 방식이고, 비동기(서버통신)는 오래 걸리는 작업을 시작만 해놓고 결과물이 도착하기 전에 다음코드를 실행하는 것이다.
 
-//동기(javascript)는 이전 코드가 완전히 끝날때까지 다음 코드가 기다리고 실행되는 방식이고, 비동기(서버통신)는 오래 걸리는 작업을 시작만 해놓고 결과물이 도착하기 전에 다음코드를 실행하는 것이다.
-
-//서버에서 데이터 가져오기: fetch, async, await
-//fetch: 괄호 안에 인터넷 주소를 쓰고 보내는 명령어
-//async: 함수 앞 예약어(function 앞에 비동기로 쓴다는 의미로 async를 쓴다)
-//await: async가 붙은 함수 안에서만 쓸 수 있다. fetch 앞에 await를 안 붙이면 바로 다음 줄로 넘어가 버려서 빈 상자만 남게된다.
+// 서버에서 데이터 가져오기: fetch, async, await
+// fetch: 괄호 안에 인터넷 주소를 쓰고 보내는 명령어
+// async: 함수 앞 예약어(function 앞에 비동기로 쓴다는 의미로 async를 쓴다)
+// await: async가 붙은 함수 안에서만 쓸 수 있다. fetch 앞에 await를 안 붙이면 바로 다음 줄로 넘어가 버려서 빈 상자만 남게된다.
 
 async function get_data() {
     try{
-    let response = await fetch('https://example.com');
-    let data = await response.json();
-//try-catch는 에러가 발생 했을때 프로그램이 먹통이 되지 않도롤 하는 문법이다. try에는 원래 실행할 코드를 넣고 catch에는 에러가 발생했을 때 출력할 코드를 넣는다.
-
-    console.log(data);
+        let response = await fetch('https://example.com');
+        let data = await response.json();
+        // try-catch는 에러가 발생 했을때 프로그램이 먹통이 되지 않도롤 하는 문법이다. try에는 원래 실행할 코드를 넣고 catch에는 에러가 발생했을 때 출력할 코드를 넣는다.
+        console.log(data);
     }
     catch(error){
         console.log('데이터를 가져 오는데 실패했습니다.' + error);
     }
-
 }
 get_data();
 
 
-//내 컴퓨터에 데이터 저장하기:
+// 내 컴퓨터에 데이터 저장하기:
 localStorage.setItem('name', '홍길동');
 
-//데이터 꺼내오기:
+// 데이터 꺼내오기: (원문 코드 유지, 실제 꺼내오기는 getItem 사용)
 let d = localStorage.setItem('name', '김철수');
 console.log(d);
 
-//데이터 삭제하기:
+// 데이터 삭제하기:
 localStorage.removeItem('name');
 
-//주의 사항: setItem뒤에 텍스트(문자열)로만 써야함.
+// 주의 사항: setItem뒤에 텍스트(문자열)로만 써야함.
 
 let Todo1 = ["1","2"];
-//localStorage.setItem("todoData", Todo); (X)
-let 변수명 = JSON.stringify(Todo); //객체나 배열을 그대로 집어 넣으면 컴퓨터가 이헤를 못해서 파일이 꺠져서 강제로 텍스트로 압축해서 넣어야한다.
-localStorage.setItem("todoData", 변수명); //텍스트로 압축하는 것
-let 변수명2 = localStorage.getItem("todoData"); //데이터를 꺼내 오는것
-let 변수명3 = JSON.parse(변수명2) //압축을 푸는것
-JSON.stringify() //배열을 텍스트 형태로 압축하라는 뜻
-JSON.parse() //압축된 텍스트를 다시 배열 형태로 되돌려라는 뜻
+// localStorage.setItem("todoData", Todo); (X)
+let 변수명 = JSON.stringify(Todo1); // 객체나 배열을 그대로 집어 넣으면 컴퓨터가 이헤를 못해서 파일이 꺠져서 강제로 텍스트로 압축해서 넣어야한다.
+localStorage.setItem("todoData", 변수명); // 텍스트로 압축하는 것
+let 변수명2 = localStorage.getItem("todoData"); // 데이터를 꺼내 오는것
+let 변수명3 = JSON.parse(변수명2); // 압축을 푸는것
+// JSON.stringify() // 배열을 텍스트 형태로 압축하라는 뜻
+// JSON.parse() // 압축된 텍스트를 다시 배열 형태로 되돌려라는 뜻
 
-//프레임 워크 배우가 전 필요한 개념
 
+// 7. 프레임 워크 배우가 전 필요한 개념
 let user = { name: "홍길동", age: 20, job: "개발자" };
-//옛날 방식
+// 옛날 방식
 let name1 = user.name;
-//요즘 방식
-const {name2, age3} = user;
+// 요즘 방식 (구조 분해 할당: 이름표만 쏙 뽑아내는 기술. name2, age3라는 변수 상자에 user 안의 알맹이가 담김)
+const { name: name2, age: age3 } = user;
 
-//스프레드 연산자: 배열이나 객체의 값들을 펼쳐서 다른 곳에 복사하거나 합치는 기호
-
+// 스프레드 연산자: 배열이나 객체의 값들을 펼쳐서 다른 곳에 복사하거나 합치는 기호
 let Todo = ['1', '2'];
 let Todo2 = ['3', '4'];
-let combine = [...Todo, ...Todo2]; //Todo와 Todo2가 합쳐짐(...은 스프레드 혹은 점점점이라고 읽는다.)
+let combine = [...Todo, ...Todo2]; // Todo와 Todo2가 합쳐짐(...은 스프레드 혹은 점점점이라고 읽는다.)
 
-//스크립트 태그 하나 안에 코드를 다 적었으면 이걸 기능별로 .js 파일로 나누고 조립해서 쓰는 방법:
-//export와 import
-//export와 import를 사용하는 이유는 만들려는 프로그램의 기능을 하나의 파일에 전부 만들지 않고 각각 따로 만들어서 파일로 저장해두고 필요할 때마다 불러와서 사용해 코드를 쪼개기 위해서이다
+// 스크립트 태그 하나 안에 코드를 다 적었으면 이걸 기능별로 .js 파일로 나누고 조립해서 쓰는 방법:
+// export와 import
+// export와 import를 사용하는 이유는 만들려는 프로그램의 기능을 하나의 파일에 전부 만들지 않고 각각 따로 만들어서 파일로 저장해두고 필요할 때마다 불러와서 사용해 코드를 쪼개기 위해서이다
 
-//export: 내보낼때 쓰는 것
+// export: 내보낼때 쓰는 것
 export const PI = 3.14;
 export const add1 = (a, b) => a + b;
 
-//export default: 파일에서 가장 중요한 기능을 내보낼 때 쓴다.
+// export default: 파일에서 가장 중요한 기능을 내보낼 때 쓴다.
 export default function Calculator() {}
-
-//-> 컴포넌트라는걸 만들 때 사용하는 방식
+// -> 컴포넌트라는걸 만들 때 사용하는 방식
 
 // './'가 현재 폴더라는 뜻
 
-//import (파일명) from '경로'; 파일로부터 파일명을 가져오는것
-//import {PI, add} from "경로"; 파일에서 일치하는 변수를 가진 것들만 가져온다는 뜻(이름이 무조건 일치해야함.)
-//import 원하는 이름: export default 대표 가져올때 중괄호 없이 가져옴. 이름도 맘대로 할 수 있음
+// import (파일명) from '경로'; 파일로부터 파일명을 가져오는것
+// import {PI, add} from "경로"; 파일에서 일치하는 변수를 가진 것들만 가져온다는 뜻(이름이 무조건 일치해야함.)
+// import 원하는 이름: export default 대표 가져올때 중괄호 없이 가져옴. 이름도 맘대로 할 수 있음
 
-//이벤트 위임 - Event Delegation
 
+// 이벤트 위임 - Event Delegation
 const ul = document.querySelector("#todo-list");
 
 ul.addEventListener("click", function(event) {
-        if(event.target.tagName === "LI") {
+    if(event.target.tagName === "LI") {
         event.target.style.color = 'lightgray';
-        }
+    }
 });
-
-//코드가 너무 길어질 때 메모리를 낭비하지 않게 하려고 이벤트 위임을 한다.
+// 코드가 너무 길어질 때 메모리를 낭비하지 않게 하려고 이벤트 위임을 한다.
+// 자식들(li)에게 일일이 센서를 달지 않고 부모(ul) 한 곳에만 달아서 관리하는 기술.
